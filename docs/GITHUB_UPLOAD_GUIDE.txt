@@ -1,0 +1,29 @@
+ALI TECH GRID CANADA — GITHUB UPLOAD GUIDE
+
+1. Open the repository: AliTechGridHQ/alitechgrid-ca
+2. Click Add file → Upload files.
+3. Open the extracted website folder on your computer.
+4. Select ALL files and folders INSIDE the package:
+   - index.html
+   - services.html
+   - book.html
+   - about.html
+   - contact.html
+   - privacy.html
+   - terms.html
+   - accessibility.html
+   - 404.html
+   - assets folder
+   - CNAME
+   - robots.txt
+   - sitemap.xml
+   - manifest.webmanifest
+   - README.md
+5. Drag them into GitHub.
+6. Commit message: Initial production website
+7. Click Commit changes.
+
+Do not upload the ZIP file itself as the website.
+Do not create an extra nested folder in the repository.
+
+Before upload, edit assets/js/site-config.js and paste the complete Zoho Live link.
