@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Computer Repair Estimate | AliTechGrid Canada</title>
+  <meta name="description" content="Request an initial estimate for computer, laptop, mobile-device, on-site or small-business IT support in Coquitlam and nearby Greater Vancouver communities.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alitechgrid.ca/estimate.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AliTechGrid Canada">
+  <meta property="og:title" content="Request a Computer Repair Estimate | AliTechGrid Canada">
+  <meta property="og:description" content="Provide your device, problem and location for an initial service estimate.">
+  <meta property="og:url" content="https://alitechgrid.ca/estimate.html">
+  <meta property="og:image" content="https://alitechgrid.ca/assets/img/alitechgrid-canada-logo.png">
+  <meta name="theme-color" content="#0b1733">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .estimate-layout { display:grid; grid-template-columns:1.2fr .8fr; gap:30px; align-items:start; }
+    .estimate-form { display:grid; gap:18px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); padding:30px; box-shadow:var(--shadow); }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .estimate-form label { display:grid; gap:7px; font-weight:700; color:var(--navy-900); }
+    .estimate-form input, .estimate-form select, .estimate-form textarea { width:100%; border:1px solid #cbd5e4; border-radius:11px; padding:12px 13px; background:#fff; color:var(--ink); }
+    .estimate-form textarea { min-height:155px; resize:vertical; }
+    .estimate-form input:focus, .estimate-form select:focus, .estimate-form textarea:focus { outline:3px solid rgba(49,87,215,.18); border-color:var(--blue-600); }
+    .check-consent { display:flex !important; align-items:flex-start; gap:10px !important; font-weight:500 !important; color:var(--muted) !important; }
+    .check-consent input { width:auto; margin-top:5px; }
+    .estimate-help { background:var(--surface-alt); border:1px solid var(--line); border-radius:var(--radius-md); padding:28px; }
+    .estimate-help ol { padding-left:21px; }
+    .estimate-help li { margin:12px 0; }
+    .estimate-note { padding:17px 18px; background:#eef3ff; border:1px solid #c8d7ff; border-radius:13px; color:var(--navy-900); }
+    @media (max-width:850px) { .estimate-layout, .form-grid { grid-template-columns:1fr; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"IT Repair and Support Estimate",
+    "provider":{"@type":"LocalBusiness","name":"AliTechGrid Canada","url":"https://alitechgrid.ca"},
+    "areaServed":["Coquitlam","Port Moody","Burnaby","New Westminster","Greater Vancouver"],
+    "serviceType":["Computer repair estimate","Laptop repair estimate","Mobile device repair assessment","On-site IT support estimate","Small-business IT support estimate"]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="AliTechGrid Canada home">
+      <img src="assets/img/alitechgrid-canada-compact.png" alt="AliTechGrid Canada">
+    </a>
+    <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="main-nav" id="main-nav" data-main-nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="book.html">Book Service</a>
+      <a href="estimate.html" aria-current="page">Request Estimate</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="button button-primary header-book" href="book.html" data-booking-link>Book service</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Initial service estimate</span>
+      <h1>Request an estimate</h1>
+      <p class="lead">Tell us the device, problem, location and preferred service option. We will review the request and respond with an initial estimate or recommend a diagnostic appointment.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container estimate-layout">
+      <form class="estimate-form" id="estimate-form">
+        <div class="form-grid">
+          <label>Full name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>Email address
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+        </div>
+        <div class="form-grid">
+          <label>Phone number
+            <input name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+          </label>
+          <label>City / service location
+            <input name="city" autocomplete="address-level2" required placeholder="Example: Coquitlam">
+          </label>
+        </div>
+        <div class="form-grid">
+          <label>Service category
+            <select name="service" required>
+              <option value="">Select a service</option>
+              <option>Computer or laptop repair</option>
+              <option>Mobile phone or tablet assessment</option>
+              <option>Wi-Fi, network or installation</option>
+              <option>Data transfer or device setup</option>
+              <option>On-site home IT support</option>
+              <option>Small-business IT support</option>
+              <option>Other IT service</option>
+            </select>
+          </label>
+          <label>Preferred service option
+            <select name="serviceOption" required>
+              <option value="">Select an option</option>
+              <option>Pickup and drop-off</option>
+              <option>On-site service</option>
+              <option>Confirmed service location</option>
+              <option>Remote support, if suitable</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-grid">
+          <label>Device type
+            <input name="deviceType" required placeholder="Laptop, desktop, phone, router...">
+          </label>
+          <label>Brand and model
+            <input name="model" required placeholder="Example: Lenovo ThinkPad T14">
+          </label>
+        </div>
+        <label>Problem description
+          <textarea name="problem" required placeholder="Describe what happened, error messages, symptoms, and any steps already tried."></textarea>
+        </label>
+        <div class="form-grid">
+          <label>When did the problem start?
+            <input name="started" placeholder="Example: Yesterday, after an update">
+          </label>
+          <label>How soon is service needed?
+            <select name="urgency">
+              <option>Flexible</option>
+              <option>Within 2–3 days</option>
+              <option>As soon as available</option>
+            </select>
+          </label>
+        </div>
+        <label class="check-consent">
+          <input type="checkbox" required>
+          <span>I understand this is an initial estimate based on the information provided. A diagnostic appointment may be required before a final quotation, parts approval or repair commitment.</span>
+        </label>
+        <button class="button button-primary" type="submit">Prepare estimate request</button>
+        <p class="muted">This form opens your email application with the completed request addressed to <strong>sales@alitechgrid.com</strong>. The website does not store the form information.</p>
+      </form>
+
+      <aside class="estimate-help">
+        <h2>How estimates work</h2>
+        <ol>
+          <li>Submit the device, problem and service location.</li>
+          <li>AliTechGrid reviews the information and confirms whether an estimate can be provided remotely.</li>
+          <li>If diagnosis is required, the diagnostic, travel or pickup fee is confirmed before service.</li>
+          <li>A final quotation is provided for approval before additional labour or parts.</li>
+          <li>Approved work is completed, tested and invoiced.</li>
+        </ol>
+        <div class="estimate-note">
+          <strong>Important:</strong> Do not enter passwords, payment-card information or confidential files. After the prepared email opens, you may attach useful photos of the device or visible damage.
+        </div>
+        <div class="button-row">
+          <a class="button button-secondary" href="book.html" data-booking-link>Book a diagnostic instead</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/img/alitechgrid-canada-logo.png" alt="AliTechGrid Canada">
+        <p>Practical IT support, repair and installation for homes and small businesses in Coquitlam and nearby Greater Vancouver communities.</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">About AliTechGrid</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="book.html">Book a diagnostic</a></li>
+          <li><a href="estimate.html">Request an estimate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Policies</h3>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Service terms</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> AliTechGrid Canada. All rights reserved.</span>
+      <span>Initial estimates are subject to diagnosis, service scope and parts availability.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(() => {
+  const form = document.getElementById('estimate-form');
+  if (!form) return;
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const subject = encodeURIComponent(`Estimate request - ${data.get('deviceType')} ${data.get('model')}`);
+    const body = encodeURIComponent(
+`REQUEST FOR INITIAL ESTIMATE
+
+Customer name: ${data.get('name')}
+Email: ${data.get('email')}
+Phone: ${data.get('phone') || 'Not provided'}
+City / service location: ${data.get('city')}
+
+Service category: ${data.get('service')}
+Preferred service option: ${data.get('serviceOption')}
+Device type: ${data.get('deviceType')}
+Brand and model: ${data.get('model')}
+Problem started: ${data.get('started') || 'Not specified'}
+Urgency: ${data.get('urgency') || 'Flexible'}
+
+Problem description:
+${data.get('problem')}
+
+I understand that this is an initial estimate and that diagnosis may be required before a final quotation or repair approval.`
+    );
+    window.location.href = `mailto:sales@alitechgrid.com?subject=${subject}&body=${body}`;
+  });
+})();
+</script>
+</body>
+</html>

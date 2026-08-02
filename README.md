@@ -73,3 +73,9 @@ Confirm before advertising:
 - Payment methods
 - Warranty policy
 - Canadian legal and privacy review of policy drafts
+
+## Estimate workflow
+
+The website includes `estimate.html`, a customer-facing Request an Estimate page. It prepares an email to `sales@alitechgrid.com`; the static website does not store form information.
+
+Initial estimates remain subject to diagnosis, service scope, travel/pickup requirements and parts availability.
