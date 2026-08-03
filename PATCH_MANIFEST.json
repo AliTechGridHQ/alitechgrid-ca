@@ -1,0 +1,35 @@
+{
+  "target_repository": "AliTechGridHQ/alitechgrid-ca",
+  "measurement_id": "G-6F9X2CTQ1C",
+  "html_files_updated": [
+    "index.html",
+    "services.html",
+    "book.html",
+    "estimate.html",
+    "about.html",
+    "contact.html",
+    "privacy.html",
+    "terms.html",
+    "accessibility.html",
+    "404.html"
+  ],
+  "privacy_disclosure_updated": true,
+  "excluded": [
+    "CNAME",
+    "DNS records",
+    "Cloudflare configuration"
+  ],
+  "sha256": {
+    "404.html": "f4609ee7d159c1af3a39a8b287e40f3d86bf5a03ea43c6a08197622f2ebef11f",
+    "UPLOAD_INSTRUCTIONS.txt": "2abf6f36a44e63746f9faaf75dcc67479083f199a82fd02e062e5c7df26ae71f",
+    "about.html": "5e75a792cfa5833e10375c540c91d7b266b52befa67ff2f9c5b4108854d26d8a",
+    "accessibility.html": "3216face55600a790897e477d6624f4df78e84bf86c746dc3c873e6b1f7d16ac",
+    "book.html": "20fd1296a049f040a8b6f3498542adc87b5362ced34bd28725731b4717581532",
+    "contact.html": "58822856aedaa13320735b63e3ad6f57fc32fc88149d39db6629ce14a7da0c80",
+    "estimate.html": "a5fe309805dc246a6d3a28e46fa58c5fa5759c9b967b205add9a944b8798cfe3",
+    "index.html": "f31101aef28742524d4261ea7432421ceac473d8a4df2d7561fccd971df3dcb9",
+    "privacy.html": "654fde199a0d6b6c362b19483cbe2cc08665d118cdef3e4942489ed7aed733da",
+    "services.html": "53de81a7cc2b930da45f00aea8aae8b3cb4049c99cdc9248130d59c81534235f",
+    "terms.html": "216989ae684441c33792105b0b2a7c68d7b52fcf688ff9ba179dd1d9df89d455"
+  }
+}
