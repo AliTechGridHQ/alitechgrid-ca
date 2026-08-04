@@ -100,6 +100,7 @@
     { label: "Computer or laptop", intent: "computer" },
     { label: "Phone or tablet", intent: "mobile" },
     { label: "Wi-Fi or printer", intent: "network" },
+    { label: "Websites & digital setup", intent: "website" },
     { label: "Book service", intent: "book" },
     { label: "Request estimate", intent: "estimate" },
     { label: "Call AliTechGrid", intent: "contact" }
@@ -139,6 +140,14 @@
       links: [
         { label: "Contact AliTechGrid", href: "contact.html", primary: true },
         { label: "Call business services", href: BUSINESS_PHONE_HREF }
+      ]
+    }),
+    website: () => ({
+      text: `<strong>Affordable websites and digital business setup</strong><br>AliTechGrid offers a Smart One-Page Website starting from CAD $399, an AI-Enabled Starter Website starting from CAD $699, and a Complete Digital Business Setup starting from CAD $1,199. Services may include domain and DNS setup, business email, booking, virtual phone guidance, analytics and a controlled FAQ chatbot. Final pricing depends on scope and third-party charges.`,
+      links: [
+        { label: "View website packages", href: "websites.html", primary: true },
+        { label: "Email website request", href: "mailto:sales@alitechgrid.com?subject=Website%20service%20request" },
+        { label: "Call AliTechGrid", href: BUSINESS_PHONE_HREF }
       ]
     }),
     book: () => ({
@@ -196,7 +205,7 @@
       ]
     }),
     fallback: () => ({
-      text: `I can help with computer and laptop repair, phone and tablet assessment, Wi-Fi and printer support, data transfer, booking, estimates, service areas and contact options. For a question requiring a person, call ${BUSINESS_PHONE_DISPLAY}.`,
+      text: `I can help with computer and laptop repair, phone and tablet assessment, Wi-Fi and printer support, affordable websites, digital business setup, data transfer, booking, estimates, service areas and contact options. For a question requiring a person, call ${BUSINESS_PHONE_DISPLAY}.`,
       links: [
         { label: "Call AliTechGrid", href: BUSINESS_PHONE_HREF, primary: true },
         { label: "Contact page", href: "contact.html" }
@@ -210,6 +219,7 @@
 
     if (has("smoke", "smoking", "fire", "burning", "swollen", "bulging", "battery hot", "overheating", "liquid", "water damage", "wet phone", "chemical smell")) return "safety";
     if (has("password", "pin", "credit card", "debit card", "payment card", "government id", "sin number", "privacy", "personal information")) return "privacy";
+    if (has("website", "web site", "web design", "webpage", "digital business", "online presence", "one page site", "business site", "chatbot setup", "virtual receptionist", "domain setup")) return "website";
     if (has("book", "booking", "appointment", "schedule", "diagnostic")) return "book";
     if (has("estimate", "quote", "cost", "price", "how much", "fee", "charge")) return "estimate";
     if (has("call", "phone number", "telephone", "contact", "human", "person", "operator", "customer support", "technical support")) return "contact";
@@ -278,7 +288,7 @@
     if (event.key === "Escape" && !panel.hidden) hidePanel();
   });
 
-  addMessage("bot", `<strong>Hello! I’m the AliTechGrid Canada virtual assistant.</strong><br>I can help with repair services, booking, estimates, service areas and contact options.`);
+  addMessage("bot", `<strong>Hello! I’m the AliTechGrid Canada virtual assistant.</strong><br>I can help with repair services, affordable websites, digital business setup, booking, estimates, service areas and contact options.`);
   addMessage("bot", `For your security, do not enter passwords, payment-card details, government ID or sensitive personal information.`);
   setQuickActions(mainActions);
 })();

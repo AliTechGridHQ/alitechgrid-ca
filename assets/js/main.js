@@ -38,6 +38,17 @@
 
   const menuButton = document.querySelector("[data-menu-button]");
   const nav = document.querySelector("[data-main-nav]");
+
+  // Keep the Website Services link visible across all existing pages without requiring every HTML file to be replaced.
+  if (nav && !nav.querySelector('a[href="websites.html"]')) {
+    const websitesLink = document.createElement("a");
+    websitesLink.href = "websites.html";
+    websitesLink.textContent = "Websites";
+    const servicesLink = nav.querySelector('a[href="services.html"]');
+    if (servicesLink) servicesLink.insertAdjacentElement("afterend", websitesLink);
+    else nav.appendChild(websitesLink);
+  }
+
   if (menuButton && nav) {
     menuButton.addEventListener("click", () => {
       const open = menuButton.getAttribute("aria-expanded") === "true";
@@ -108,7 +119,7 @@
     if (contactPanel && !contactPanel.querySelector('a[href^="tel:"]')) {
       const phoneRow = document.createElement("div");
       phoneRow.className = "contact-row";
-      phoneRow.innerHTML = `<strong>Business phone</strong><br><a href="${businessPhoneHref}" data-phone-link="true">${businessPhoneDisplay}</a><br><span class="muted">Press 1 for Technical Support, 2 for AI, Cloud & Training, or 0 for Customer Support.</span>`;
+      phoneRow.innerHTML = `<strong>Business phone</strong><br><a href="${businessPhoneHref}" data-phone-link="true">${businessPhoneDisplay}</a><br><span class="muted">Press 0 for Customer Support, 1 for Technical Support, or 2 for AI, Cloud Consultancy & Training.</span>`;
       contactPanel.insertBefore(phoneRow, contactPanel.firstChild);
     }
   }
@@ -121,6 +132,16 @@
     phoneLine.append("Business phone: ");
     phoneLine.appendChild(createPhoneLink(businessPhoneDisplay));
     footerIdentity.appendChild(phoneLine);
+  }
+
+  // Add Website Services to footers on existing pages.
+  const footerCompanyLinks = document.querySelector(".site-footer .footer-grid > div:nth-child(2) .footer-links");
+  if (footerCompanyLinks && !footerCompanyLinks.querySelector('a[href="websites.html"]')) {
+    const item = document.createElement("li");
+    item.innerHTML = '<a href="websites.html">Website services</a>';
+    const servicesItem = footerCompanyLinks.querySelector('a[href="services.html"]')?.closest("li");
+    if (servicesItem) servicesItem.insertAdjacentElement("afterend", item);
+    else footerCompanyLinks.appendChild(item);
   }
 
   // Measure click-to-call actions in the Canada GA4 property.
