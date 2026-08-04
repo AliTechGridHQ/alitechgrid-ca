@@ -1,103 +1,70 @@
 (() => {
   "use strict";
 
-  const config = window.ALITECHGRID_INTL_CONFIG || {};
-  const placeholder = "PASTE_INTERNATIONAL_CONSULTATION_LIVE_LINK_HERE";
+  const config = window.ALITECHGRID_CONFIG || {};
+  const placeholder = "PASTE_FULL_ZOHO_LIVE_LINK_HERE";
   const bookingReady =
-    typeof config.consultationBookingUrl === "string" &&
-    config.consultationBookingUrl.trim() &&
-    config.consultationBookingUrl !== placeholder &&
-    /^https:\/\//i.test(config.consultationBookingUrl);
+    typeof config.bookingUrl === "string" &&
+    config.bookingUrl.trim() &&
+    config.bookingUrl !== placeholder &&
+    /^https:\/\/calendar\.zohocloud\.ca\//i.test(config.bookingUrl);
 
-  document.querySelectorAll("[data-consultation-link]").forEach((link) => {
+  document.querySelectorAll("[data-booking-link]").forEach((link) => {
     if (bookingReady) {
-      link.href = config.consultationBookingUrl;
+      link.href = config.bookingUrl;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     } else {
-      link.href = "contact.html";
+      link.href = "book.html";
     }
   });
+
+  const bookingFrame = document.querySelector("[data-booking-frame]");
+  const bookingNotice = document.querySelector("[data-booking-notice]");
+  if (bookingFrame) {
+    if (bookingReady) {
+      bookingFrame.src = config.bookingUrl;
+      bookingFrame.hidden = false;
+      if (bookingNotice) bookingNotice.hidden = true;
+    } else {
+      bookingFrame.hidden = true;
+      if (bookingNotice) bookingNotice.hidden = false;
+    }
+  }
 
   document.querySelectorAll("[data-current-year]").forEach((el) => {
     el.textContent = new Date().getFullYear();
   });
 
-  const nav = document.querySelector("[data-main-nav]");
-  if (nav) {
-    const trainingLink = nav.querySelector('a[href="education.html"]');
-    if (trainingLink) trainingLink.textContent = "Training";
-
-    // Request Proposal is the single primary header action, not an extra nav item.
-    nav.querySelectorAll('a[href="proposal.html"]').forEach((link) => link.remove());
-  }
-
-  const headerCta = document.querySelector(".header-cta");
-  if (headerCta) {
-    headerCta.removeAttribute("data-consultation-link");
-    headerCta.href = "proposal.html";
-    headerCta.target = "";
-    headerCta.rel = "";
-    headerCta.textContent = "Request Proposal";
-  }
-
-  const path = window.location.pathname.toLowerCase();
-  if (path.endsWith("/") || path.endsWith("/index.html")) {
-    const actions = document.querySelector(".hero-actions");
-    if (actions && !actions.querySelector('a[href="education.html"]')) {
-      const training = document.createElement("a");
-      training.className = "button button-secondary";
-      training.href = "education.html";
-      training.textContent = "Explore AI, Sovereign AI & Cloud Training";
-      actions.appendChild(training);
-    }
-  }
-
   const menuButton = document.querySelector("[data-menu-button]");
+  const nav = document.querySelector("[data-main-nav]");
   if (menuButton && nav) {
     menuButton.addEventListener("click", () => {
-      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!isOpen));
-      nav.classList.toggle("is-open", !isOpen);
+      const open = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!open));
+      nav.classList.toggle("is-open", !open);
     });
   }
 
-  const form = document.querySelector("[data-email-request-form]");
-  if (form) {
-    const projectType = form.querySelector('select[name="projectType"]');
-    if (projectType && !Array.from(projectType.options).some(
-      (option) => option.value === "AI, sovereign AI and cloud training proposal"
-    )) {
-      const option = document.createElement("option");
-      option.value = "AI, sovereign AI and cloud training proposal";
-      option.textContent = "AI, sovereign AI and cloud training proposal";
-      projectType.insertBefore(option, projectType.firstChild);
-    }
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const data = new FormData(form);
-      const subject = encodeURIComponent(
-        `Institutional inquiry: ${data.get("projectType") || "AliTechGrid International"}`
-      );
-      const body = encodeURIComponent(
-`Name: ${data.get("name") || ""}
-Institution/Company: ${data.get("organization") || ""}
-Role: ${data.get("role") || ""}
-Country/Region: ${data.get("country") || ""}
-Project type: ${data.get("projectType") || ""}
-
-Message:
-${data.get("message") || ""}`
-      );
-      window.location.href = `mailto:${config.contactEmail || "contact@alitechgrid.com"}?subject=${subject}&body=${body}`;
+  document.querySelectorAll("[data-copy-email]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const email = button.dataset.copyEmail;
+      try {
+        await navigator.clipboard.writeText(email);
+        const old = button.textContent;
+        button.textContent = "Email copied";
+        setTimeout(() => (button.textContent = old), 1600);
+      } catch {
+        window.location.href = `mailto:${email}`;
+      }
     });
-  }
+  });
 
 
   // Public AliTechGrid business telephone and click-to-call support.
   const businessPhoneDisplay = "+1 778-358-4040";
   const businessPhoneHref = "tel:+17783584040";
+  const path = window.location.pathname.toLowerCase();
 
   const createPhoneLink = (label, className = "") => {
     const link = document.createElement("a");
@@ -109,11 +76,11 @@ ${data.get("message") || ""}`
     return link;
   };
 
-  // Add the telephone to Organization structured data for search engines.
+  // Add the telephone to LocalBusiness structured data for search engines.
   document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
     try {
       const data = JSON.parse(script.textContent);
-      if (data && (data["@type"] === "Organization" || data["@type"] === "LocalBusiness")) {
+      if (data && (data["@type"] === "LocalBusiness" || data["@type"] === "Organization")) {
         data.telephone = businessPhoneDisplay;
         script.textContent = JSON.stringify(data, null, 2);
       }
@@ -122,28 +89,27 @@ ${data.get("message") || ""}`
     }
   });
 
-  // Show a call option on the international homepage.
+  // Add Call Now to the Canada homepage.
   if (path.endsWith("/") || path.endsWith("/index.html")) {
     const actions = document.querySelector(".hero-actions");
     if (actions && !actions.querySelector('a[href^="tel:"]')) {
-      actions.appendChild(createPhoneLink(`Call ${businessPhoneDisplay}`, "button button-secondary"));
+      actions.appendChild(createPhoneLink("Call Now", "button button-secondary"));
     }
   }
 
-  // Replace the old internal Zoho-planning note with the live business phone.
+  // Make the telephone prominent on the Canada contact page.
   if (path.endsWith("/contact.html")) {
-    const consultationRow = Array.from(document.querySelectorAll(".contact-panel .contact-row"))
-      .find((row) => row.textContent.includes("A separate international Zoho consultation page"));
-    if (consultationRow) {
-      consultationRow.innerHTML = `<strong>Phone consultation</strong><br><a href="${businessPhoneHref}" data-phone-link="true">${businessPhoneDisplay}</a><br><span class="muted">Press 2 for AI, cloud and training inquiries.</span>`;
+    const actionRow = document.querySelector(".button-row");
+    if (actionRow && !actionRow.querySelector('a[href^="tel:"]')) {
+      actionRow.insertBefore(createPhoneLink("Call Now", "button button-primary"), actionRow.firstChild);
     }
-  }
 
-  // Add a direct call button to the proposal page.
-  if (path.endsWith("/proposal.html")) {
-    const proposalButtons = document.querySelector(".proposal-help .button-row");
-    if (proposalButtons && !proposalButtons.querySelector('a[href^="tel:"]')) {
-      proposalButtons.appendChild(createPhoneLink("Call AliTechGrid", "button button-secondary"));
+    const contactPanel = document.querySelector(".contact-panel");
+    if (contactPanel && !contactPanel.querySelector('a[href^="tel:"]')) {
+      const phoneRow = document.createElement("div");
+      phoneRow.className = "contact-row";
+      phoneRow.innerHTML = `<strong>Business phone</strong><br><a href="${businessPhoneHref}" data-phone-link="true">${businessPhoneDisplay}</a><br><span class="muted">Press 1 for Technical Support, 2 for AI, Cloud & Training, or 0 for Customer Support.</span>`;
+      contactPanel.insertBefore(phoneRow, contactPanel.firstChild);
     }
   }
 
@@ -157,7 +123,7 @@ ${data.get("message") || ""}`
     footerIdentity.appendChild(phoneLine);
   }
 
-  // Measure click-to-call actions in the correct GA4 property.
+  // Measure click-to-call actions in the Canada GA4 property.
   document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
     if (link.dataset.phoneTrackingReady === "true") return;
     link.dataset.phoneTrackingReady = "true";
@@ -172,4 +138,23 @@ ${data.get("message") || ""}`
     });
   });
 
+})();
+
+// Load the AliTechGrid Canada virtual assistant on every page.
+(() => {
+  const cssHref = "assets/css/chatbot.css";
+  if (!document.querySelector(`link[href="${cssHref}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssHref;
+    document.head.appendChild(link);
+  }
+
+  const scriptSrc = "assets/js/chatbot.js";
+  if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+    const script = document.createElement("script");
+    script.src = scriptSrc;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
 })();
