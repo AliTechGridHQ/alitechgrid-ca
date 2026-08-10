@@ -1,0 +1,44 @@
+ALITECHGRID.CA REPAIR-SHOP REDESIGN TEST REPORT
+Build date: 2026-08-10
+
+Checks passed: 30/30
+
+PASS - index.html parses
+PASS - index.html has one h1
+PASS - index.html lang en-CA
+PASS - index.html has title
+PASS - index.html meta description
+PASS - index.html local refs target known production files
+PASS - services.html parses
+PASS - services.html has one h1
+PASS - services.html lang en-CA
+PASS - services.html has title
+PASS - services.html meta description
+PASS - services.html local refs target known production files
+PASS - index includes DESKTOP
+PASS - index includes LAPTOP
+PASS - index includes MOBILE
+PASS - index includes WI-FI
+PASS - index includes SWITCH
+PASS - index includes ROUTER
+PASS - index includes Book a service
+PASS - index includes Get an estimate
+PASS - index includes Computer is slow
+PASS - index includes Wi-Fi keeps dropping
+PASS - no storefront claim
+PASS - booking hooks preserved
+PASS - GA4 preserved
+PASS - business phone present
+PASS - CSS parsed without top-level errors
+PASS - desktop breakpoint present
+PASS - mobile breakpoint present
+PASS - device showcase styling present
+
+PRODUCTION INTEGRATION VERIFICATION
+PASS - Current repository assets/js/site-config.js contains a complete https://calendar.zohocloud.ca/ booking URL.
+PASS - Current repository assets/js/main.js recognizes that URL pattern, redirects data-booking-link buttons to Zoho, loads the booking iframe, and hides the owner-action notice when booking is ready.
+PASS - Patch does not replace CNAME, robots.txt, sitemap.xml, existing images, booking configuration, analytics support files or chatbot files.
+PASS - Patch preserves GA4 measurement ID G-6F9X2CTQ1C in the redesigned pages.
+
+NOTE
+Automated browser rendering was attempted in the isolated execution environment, but local browser navigation is blocked by the environment administrator. Structural HTML/CSS/link checks completed successfully instead. Final visual verification should be performed after GitHub Pages deploys the patch, using the steps in README_DEPLOY.txt.
