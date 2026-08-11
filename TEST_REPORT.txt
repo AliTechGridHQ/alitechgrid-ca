@@ -1,49 +1,76 @@
-AliTechGrid Canada — Local Canadian Repair-Shop Website Update Test Report
+AliTechGrid Canada — Dynamic Customer Service Homepage Verification
+Build date: 2026-08-10
 
-01. [PASS] File exists: index.html
-02. [PASS] File exists: services.html
-03. [PASS] File exists: assets/css/local-it.css
-04. [PASS] File exists: assets/img/alitechgrid-repair-workbench.png
-05. [PASS] File exists: README_DEPLOY.txt
-06. [PASS] Index has title
-07. [PASS] Index H1 present
-08. [PASS] Local Canadian kicker present
-09. [PASS] Local service line present
-10. [PASS] Hero image uses PNG
-11. [PASS] Hero image alt present
-12. [PASS] OG image updated on index
-13. [PASS] Booking link hook present
-14. [PASS] Call link present
-15. [PASS] Estimate link present
-16. [PASS] Problem cards count >= 8 (8)
-17. [PASS] Service cards count >= 6 (6)
-18. [PASS] Process steps count == 4 (4)
-19. [PASS] Footer mentions Proudly Canadian
-20. [PASS] Services page eyebrow updated
-21. [PASS] Services page OG image updated
-22. [PASS] Services has all key sections
-23. [PASS] Services footer mentions Proudly Canadian
-24. [PASS] CSS has shop-local style
-25. [PASS] CSS uses contain for hero image
-26. [PASS] CSS no repair-visual-badge block remains
-27. [PASS] CSS responsive device row retained
-28. [PASS] CSS mobile breakpoint retained
-29. [PASS] Hero uses skip link
-30. [PASS] GA4 present on both pages
-31. [PASS] Phone number present on both pages
-32. [PASS] Image size is 1254x1254 ((1254, 1254))
-33. [PASS] Image format is PNG (PNG)
-34. [PASS] README includes commit message suggestion
-35. [PASS] ZIP contains index.html
-36. [PASS] ZIP contains services.html
-37. [PASS] ZIP contains assets/css/local-it.css
-38. [PASS] ZIP contains assets/img/alitechgrid-repair-workbench.png
-39. [PASS] ZIP contains README_DEPLOY.txt
-40. [PASS] ZIP contains TEST_REPORT.txt
+01. [PASS] Required file present: index.html
+02. [PASS] Required file present: services.html
+03. [PASS] Required file present: assets/css/local-it.css
+04. [PASS] Required file present: assets/js/local-services.js
+05. [PASS] Required file present: assets/img/alitechgrid-repair-workbench.png
+06. [PASS] Required file present: README_DEPLOY.txt
+07. [PASS] Homepage parses with a document title
+08. [PASS] Homepage has exactly one H1 — 1
+09. [PASS] Customer-first H1 is present
+10. [PASS] Canadian local service badge is present
+11. [PASS] Greater Vancouver service-area statement is present
+12. [PASS] Primary header uses full AliTechGrid Canada logo
+13. [PASS] Open Graph image uses repair-shop PNG
+14. [PASS] LocalBusiness structured data is present
+15. [PASS] GA4 identifier retained
+16. [PASS] Business phone retained
+17. [PASS] Booking hook retained
+18. [PASS] Estimate link retained
+19. [PASS] Exactly 6 repair service selectors — 6
+20. [PASS] Selector services are Desktop/Laptop/Mobile/Wi-Fi/Network/Router — ['desktop', 'laptop', 'mobile', 'wifi', 'network', 'router']
+21. [PASS] Web Design is not mixed into repair selector
+22. [PASS] Service selector uses radiogroup semantics
+23. [PASS] Each service selector uses role=radio
+24. [PASS] Exactly one default selector is checked
+25. [PASS] Each selector contains an inline SVG icon
+26. [PASS] Dynamic panel has live-region semantics
+27. [PASS] Dynamic panel has title target
+28. [PASS] Dynamic panel has problem-list target
+29. [PASS] Dynamic panel has booking action
+30. [PASS] Dynamic panel has estimate action
+31. [PASS] Dynamic panel has service-details action
+32. [PASS] Homepage loads local-services.js
+33. [PASS] Exactly 3 business-service cards — 3
+34. [PASS] Business services include Website Design
+35. [PASS] Business services include Small-Business IT
+36. [PASS] Business services include Cloud & Business Email
+37. [PASS] Website Design links to websites page
+38. [PASS] Repair-shop image retained in lower trust section
+39. [PASS] Repair-shop image path is PNG
+40. [PASS] Repair-shop image has descriptive alt text
+41. [PASS] Repair-shop image is lazy-loaded below the fold
+42. [PASS] Repair-shop image resolution is 1254 x 1254 — (1254, 1254)
+43. [PASS] Repair-shop image remains PNG — PNG
+44. [PASS] Delivered repair-shop image exactly matches supplied source image
+45. [PASS] Services page retains one H1
+46. [PASS] Services page retains all main anchors
+47. [PASS] Services page retains local Canadian wording
+48. [PASS] Services page keeps booking, call and estimate actions
+49. [PASS] CSS braces are balanced — 262/262
+50. [PASS] Dynamic hero styles present
+51. [PASS] Selector selected-state style present
+52. [PASS] Keyboard focus-visible style present
+53. [PASS] Desktop 3-column selector layout present
+54. [PASS] Mobile 2-column selector layout present
+55. [PASS] Small mobile breakpoint present
+56. [PASS] Business service desktop grid present
+57. [PASS] Lower image uses responsive width
+58. [PASS] local-services.js passes Node syntax check
+59. [PASS] Dynamic service data exists: desktop
+60. [PASS] Dynamic service data exists: laptop
+61. [PASS] Dynamic service data exists: mobile
+62. [PASS] Dynamic service data exists: wifi
+63. [PASS] Dynamic service data exists: network
+64. [PASS] Dynamic service data exists: router
+65. [PASS] Dynamic JS updates aria-checked state
+66. [PASS] Dynamic JS supports keyboard arrow navigation
+67. [PASS] Dynamic JS updates panel problem list
+68. [PASS] Dynamic JS updates service details href
+69. [PASS] Dynamic selector functional harness passes — PASS click handler attached to all 6 service selectors | PASS Laptop selection updates title | PASS Laptop selection updates compact icon | PASS Laptop selection updates 4 customer problems | PASS ARIA radio state updates | PASS Laptop details link targets computer service section | PASS Arrow-key radio navigation prevents default scrolling | PASS ArrowRight moves selection to Mobile | PASS Keyboard selection updates ARIA state | PASS Router selection updates correct service panel and details link
 
-Total checks: 40
-Passed: 40
+Total checks: 69
+Passed: 69
 Failed: 0
-
-ZIP file: AliTechGrid_CA_Local_Canadian_Repair_Shop_Website_Update_2026-08-10.zip
-SHA256: b046011184fffac8314402a0fff02cdb0c6146d94b5cfddf553c02cc934603bc
