@@ -1,0 +1,56 @@
+AliTechGrid Canada — FINAL NO-CROP VISUAL FIX TEST REPORT
+Date: 2026-08-11
+Result: 43/43 checks passed
+
+Purpose: verify that service photography is displayed without CSS cropping and that the final override wins over earlier experimental fixed-height rules.
+
+PASS — authoritative no-crop policy present
+PASS — final policy uses object-fit contain
+PASS — final policy forces natural auto height
+PASS — final policy removes min-height
+PASS — final policy removes max-height
+PASS — mobile no-crop override present
+PASS — small mobile auto-height override present
+PASS — no later crop-forcing rule: object-fit:cover!important
+PASS — no later crop-forcing rule: object-fit:cover !important
+PASS — no later crop-forcing rule: height:250px!important
+PASS — no later crop-forcing rule: height:250px !important
+PASS — onsite-feature-visual exists
+PASS — onsite-feature-visual image exists
+PASS — onsite-feature-visual image file exists — /mnt/data/atg_rebuild/assets/img/alitechgrid-home-service.jpg
+PASS — onsite-feature-visual image healthy — 1400x900
+PASS — pickup-feature-visual exists
+PASS — pickup-feature-visual image exists
+PASS — pickup-feature-visual image file exists — /mnt/data/atg_rebuild/assets/img/alitechgrid-pickup-service.jpg
+PASS — pickup-feature-visual image healthy — 1400x900
+PASS — business-visual-feature exists
+PASS — business-visual-feature image exists
+PASS — business-visual-feature image file exists — /mnt/data/atg_rebuild/assets/img/alitechgrid-business-service.jpg
+PASS — business-visual-feature image healthy — 1200x720
+PASS — repair-brand-visual exists
+PASS — repair-brand-visual image exists
+PASS — repair-brand-visual image file exists — /mnt/data/atg_rebuild/assets/img/alitechgrid-repair-service.jpg
+PASS — repair-brand-visual image healthy — 1400x900
+PASS — mobile-service-proof-visual exists
+PASS — mobile-service-proof-visual image exists
+PASS — mobile-service-proof-visual image file exists — /mnt/data/atg_rebuild/assets/img/alitechgrid-mobile-service.jpg
+PASS — mobile-service-proof-visual image healthy — 1400x736
+PASS — all five business images unique — ['assets/img/alitechgrid-home-service.jpg', 'assets/img/alitechgrid-pickup-service.jpg', 'assets/img/alitechgrid-business-service.jpg', 'assets/img/alitechgrid-repair-service.jpg', 'assets/img/alitechgrid-mobile-service.jpg']
+PASS — Surrey included
+PASS — WhatsApp number present
+PASS — Business phone present
+PASS — JS syntax assets/js/local-services.js
+PASS — JS syntax assets/js/whatsapp.js
+PASS — JS syntax assets/js/estimate.js
+PASS — aspect metadata assets/img/alitechgrid-home-service.jpg — file=(1400, 900) declared=(1200, 720)
+PASS — aspect metadata assets/img/alitechgrid-pickup-service.jpg — file=(1400, 900) declared=(1200, 720)
+PASS — aspect metadata assets/img/alitechgrid-mobile-service.jpg — file=(1400, 736) declared=(1400, 736)
+PASS — aspect metadata assets/img/alitechgrid-business-service.jpg — file=(1200, 720) declared=(1200, 720)
+PASS — aspect metadata assets/img/alitechgrid-repair-service.jpg — file=(1400, 900) declared=(1200, 720)
+
+Verification notes:
+- The final stylesheet contains an authoritative no-crop block at the end of the cascade.
+- All five key service images use width:100%, height:auto and object-fit:contain in the final rule set.
+- Tablet and phone overrides retain natural image height rather than restoring fixed crop heights.
+- JavaScript syntax checks passed for service selector, WhatsApp and estimator files.
+- Chromium headless rendering is not reliable in this container (process timeout/DBus limitation), so this report does not claim an automated browser screenshot render. The CSS cascade and image assets were validated directly.

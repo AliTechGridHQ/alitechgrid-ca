@@ -237,7 +237,7 @@
   min-height:520px;
   max-height:none;
   object-fit:cover;
-  object-position:center 46%;
+  object-position:center top;
 }
 .onsite-feature-visual figcaption{
   flex:0 0 auto;
@@ -255,7 +255,7 @@
   min-height:500px;
   max-height:none;
   object-fit:cover;
-  object-position:center 44%;
+  object-position:center top;
 }
 .pickup-feature-copy{
   min-height:500px;
@@ -272,7 +272,7 @@
   min-height:390px;
   max-height:none;
   object-fit:cover;
-  object-position:center 44%;
+  object-position:center top;
 }
 .repair-brand-grid{
   grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
@@ -287,7 +287,7 @@
   max-height:none!important;
   aspect-ratio:auto!important;
   object-fit:cover!important;
-  object-position:center 45%!important;
+  object-position:center top!important;
 }
 
 /* Vehicle proof is intentionally shorter than the core service photography. */
@@ -344,11 +344,11 @@
     max-height:390px!important;
     object-fit:cover!important;
   }
-  .onsite-feature-visual img{object-position:center 42%!important}
-  .pickup-feature-visual img{object-position:center 42%!important}
+  .onsite-feature-visual img{object-position:center top!important}
+  .pickup-feature-visual img{object-position:center top!important}
   .business-visual-feature figure,.business-visual-feature figure img{min-height:0!important}
-  .business-visual-feature figure img{object-position:center 42%!important}
-  .repair-brand-visual img{object-position:center 43%!important}
+  .business-visual-feature figure img{object-position:center top!important}
+  .repair-brand-visual img{object-position:center top!important}
   .mobile-service-proof-visual img{object-position:center 45%!important}
 }
 
@@ -362,4 +362,123 @@
     max-height:250px!important;
   }
   .onsite-feature-visual figcaption{position:static;border:0;border-radius:0;background:#071327;padding:10px 14px;backdrop-filter:none}
+}
+
+/* ============================================================
+   AUTHORITATIVE NO-CROP SERVICE IMAGE POLICY — 2026-08-11
+   This block intentionally overrides all earlier experimental
+   fixed-height / cover rules. Service photography must display
+   the complete source image without cutting off people, vehicles,
+   equipment, logos or the customer hand-off scene.
+   ============================================================ */
+
+.onsite-feature,
+.pickup-feature,
+.business-visual-feature,
+.repair-brand-grid,
+.mobile-service-proof-card{
+  align-items:center !important;
+}
+
+.onsite-feature-visual,
+.pickup-feature-visual,
+.business-visual-feature figure,
+.repair-brand-visual,
+.mobile-service-proof-visual{
+  min-height:0 !important;
+  max-height:none !important;
+  height:auto !important;
+  align-self:center !important;
+  overflow:hidden;
+}
+
+.onsite-feature-visual img,
+.pickup-feature-visual img,
+.business-visual-feature figure img,
+.repair-brand-visual img,
+.mobile-service-proof-visual img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+}
+
+/* Captions belong in the document flow so they never create a false
+   empty image panel or overlap important image content. */
+.onsite-feature-visual figcaption,
+.repair-brand-visual figcaption{
+  position:static !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  display:block;
+  padding:10px 14px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:#071327 !important;
+  color:#d7e5fa !important;
+  text-align:center;
+  backdrop-filter:none !important;
+}
+
+/* Keep the content cards compact enough to sit naturally beside the
+   complete uncropped photographs. */
+.onsite-feature-copy,
+.pickup-feature-copy,
+.business-visual-feature>div,
+.mobile-service-proof-copy{
+  min-height:0 !important;
+}
+
+.pickup-feature-copy{padding:34px 38px !important}
+.business-visual-feature>div{padding:30px 34px !important}
+.mobile-service-proof-copy{padding:30px 34px !important}
+
+/* Prevent any earlier tablet/phone crop rules from reappearing. */
+@media (max-width:820px){
+  .onsite-feature,
+  .pickup-feature,
+  .business-visual-feature,
+  .repair-brand-grid,
+  .mobile-service-proof-card{
+    grid-template-columns:1fr !important;
+    align-items:start !important;
+  }
+  .onsite-feature-copy,
+  .pickup-feature-copy,
+  .business-visual-feature>div,
+  .repair-brand-copy,
+  .mobile-service-proof-copy{order:1 !important}
+  .onsite-feature-visual,
+  .pickup-feature-visual,
+  .business-visual-feature figure,
+  .repair-brand-visual,
+  .mobile-service-proof-visual{order:2 !important;width:100% !important}
+  .onsite-feature-visual img,
+  .pickup-feature-visual img,
+  .business-visual-feature figure img,
+  .repair-brand-visual img,
+  .mobile-service-proof-visual img{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+}
+
+@media (max-width:560px){
+  .onsite-feature-visual img,
+  .pickup-feature-visual img,
+  .business-visual-feature figure img,
+  .repair-brand-visual img,
+  .mobile-service-proof-visual img{
+    height:auto !important;
+    max-height:none !important;
+  }
 }
