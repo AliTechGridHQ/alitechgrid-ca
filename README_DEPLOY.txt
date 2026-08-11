@@ -1,77 +1,101 @@
 AliTechGrid Canada — Final Professional Website Update
-Date: 2026-08-11
+Generated: 2026-08-11
 
 PURPOSE
-This production overlay keeps the interactive customer-first hero and strengthens AliTechGrid's four highest-value service visuals:
-1. Home / on-site support
-2. Pickup & Return
-3. Small-business IT support
-4. Computer & laptop repair
+This is a production overlay for the existing GitHub Pages repository:
+AliTechGridHQ/alitechgrid-ca
 
-WHAT CHANGED
-- Pickup & Return is now a full dedicated business section, not a small card.
-- The interactive Desktop / Laptop / Mobile / Wi-Fi / Network / Router selector remains the homepage entry point.
-- Home, Pickup, Business and Repair images are each used once only.
-- Images are constrained to professional landscape dimensions on desktop/tablet/mobile.
-- WhatsApp Business remains +1 672 671 9982.
-- Main phone remains +1 778-358-4040.
-- Existing preliminary estimator, first-time discount, multi-device discount, tax planning and booking hooks are preserved.
-- No Tesla-specific wording, GTA claims, placeholder phone numbers, or unsupported 100% satisfaction claim are included.
+WHAT THIS UPDATE ADDS / REFINES
+- Customer-first dynamic service selector: Desktop, Laptop, Mobile, Wi-Fi, Network, Router
+- Preliminary estimator with home vs small-business service modes
+- 10% eligible-labour first-time customer discount
+- 10% eligible-labour multi-device saving on additional qualifying devices
+- 20% maximum combined promotional labour discount
+- GST/PST planning display with final tax confirmed after scope is known
+- WhatsApp Business integration: +1 672 671 9982
+- Primary business phone preserved: +1 778-358-4040
+- Stronger "We come to you" positioning for home and small-business service
+- Pickup & return service positioning
+- Four distinct, purpose-selected website images with poster text/incorrect campaign claims cropped out:
+  * Home on-site support
+  * Small-business IT support
+  * Computer/laptop repair
+  * Pickup & return
+- No Tesla-specific campaign wording on the live homepage
+- No GTA, placeholder phone numbers, or unsupported 100% satisfaction claim
 
-DEPLOYMENT
-This is an overlay package for the existing AliTechGrid GitHub Pages repository.
-Upload the CONTENTS of this package to the matching repository paths.
-Do NOT upload the ZIP itself as the website.
-Do NOT delete existing production files that are not included here.
-
-IMPORTANT — PRESERVE EXISTING PRODUCTION FILES
-Keep the existing:
-- CNAME
-- assets/css/styles.css
-- assets/js/main.js
-- assets/js/site-config.js (including the working Zoho booking URL)
-- existing logos, favicon and manifest assets
-- chatbot assets
-- privacy/terms/accessibility pages
-- sitemap.xml and robots.txt
-- any other production pages not included in this overlay
-
-FILES IN THIS UPDATE
+FILES TO UPLOAD / REPLACE
+At repository root:
 - index.html
 - services.html
 - estimate.html
 - book.html
 - contact.html
-- assets/css/local-it.css
-- assets/css/estimate.css
-- assets/js/local-services.js
-- assets/js/estimate.js
-- assets/js/whatsapp.js
-- assets/img/alitechgrid-home-service.jpg
-- assets/img/alitechgrid-pickup-service.jpg
-- assets/img/alitechgrid-business-service.jpg
-- assets/img/alitechgrid-repair-service.jpg
-- PRICING_TAX_WHATSAPP_CONFIG.md
-- TEST_REPORT.txt
 
-POST-DEPLOYMENT CHECK
-1. Wait for GitHub Pages deployment.
-2. Open alitechgrid.ca in an InPrivate/Incognito window.
-3. Test Desktop, Laptop, Mobile, Wi-Fi, Network and Router selectors.
-4. Test Get Preliminary Estimate.
-5. Test WhatsApp from the hero and Pickup & Return section.
-6. Test Book Service / Zoho booking.
-7. Review the homepage on desktop and a real phone.
-8. Confirm the four images are cropped cleanly and no image dominates the page.
-9. Confirm Pickup & Return appears immediately after the We Come to You section.
+Under assets/css:
+- local-it.css
+- estimate.css
 
-RECOMMENDED COMMIT MESSAGE
-Strengthen on-site and pickup-return customer journey with professional service imagery
+Under assets/js:
+- local-services.js
+- estimate.js
+- whatsapp.js
 
-FINAL 2026-08-11 MOBILE-SERVICE UPDATE
-- Added assets/img/alitechgrid-mobile-service.jpg as a fifth, secondary business-value image.
-- Homepage order: interactive selector -> We Come to You -> Pickup & Return -> Mobile service capability -> Small-Business IT -> Computer/Laptop Repair -> process -> CTA.
-- The mobile-service image is a clean landscape crop; poster headings/icons were excluded.
-- Do not delete existing production assets not included in this patch (CNAME, styles.css, site-config.js, main.js, logos, chatbot assets, policy pages, sitemap, etc.).
-- Upload files INSIDE the ZIP to the matching repository paths.
-- After GitHub Pages publishes, test index.html, estimate.html, book.html and contact.html in an InPrivate/Incognito window and on a phone.
+Under assets/img:
+- alitechgrid-home-service.jpg
+- alitechgrid-business-service.jpg
+- alitechgrid-repair-service.jpg
+- alitechgrid-pickup-service.jpg
+
+DO NOT DELETE OR REPLACE UNLESS INTENDED
+Keep the existing production files including:
+- CNAME
+- assets/css/styles.css
+- assets/js/site-config.js
+- assets/js/main.js
+- existing AliTechGrid logo/favicon assets
+- websites.html
+- about.html
+- privacy.html
+- terms.html
+- accessibility.html
+- robots.txt
+- sitemap.xml
+- chatbot assets
+- manifest.webmanifest
+- Zoho booking configuration
+
+DEPLOYMENT
+1. Back up the repository or confirm the latest commit is recoverable.
+2. Extract this ZIP locally.
+3. Upload the files INSIDE the extracted package to their matching repository paths.
+4. Do not upload the ZIP itself as the website.
+5. Commit with a clear message, for example:
+   Finalize customer-first website with professional service imagery
+6. Wait for GitHub Pages to deploy.
+7. Test https://alitechgrid.ca/ in a private/incognito browser window.
+
+POST-DEPLOYMENT CHECKLIST
+- Homepage dynamic Desktop/Laptop/Mobile/Wi-Fi/Network/Router selector changes correctly
+- Book Service opens the existing Zoho booking flow
+- Get Estimate opens estimate.html
+- WhatsApp opens +1 672 671 9982 with the prepared message
+- Call links use +1 778-358-4040
+- Home on-site image appears in "We come to you"
+- Small-business image appears only in the business section
+- Repair image appears only with repair services
+- Pickup image appears only in pickup/return
+- Desktop and mobile layouts remain clean
+- No Tesla/GTA/incorrect campaign phone text appears in website HTML
+
+VERIFICATION
+See TEST_REPORT.txt. The package passed 156/156 automated production-overlay checks, including image integrity, SEO/structured data, dynamic selector hooks, WhatsApp configuration, estimator execution, discount/tax logic, JavaScript syntax, responsive CSS markers, local-reference validation, and local HTTP smoke testing.
+
+IMPORTANT PRICING NOTE
+The estimator is a planning / preliminary estimate, not a binding quotation. Parts, travel outside the normal service area, unusual complexity, advanced recovery, and additional approved work may change the final amount. Applicable taxes are finalized after the taxable service components are known.
+
+
+FINAL VISUAL FIX (2026-08-11)
+- Replace index.html and assets/css/local-it.css from this package.
+- Keep all five assets/img/alitechgrid-*-service.jpg files from the package.
+- The fix removes empty image-panel space and normalizes image sizing/cropping across desktop, tablet and mobile.

@@ -1,0 +1,52 @@
+AliTechGrid Canada — Final Visual/Layout Correction Test Report
+Date: 2026-08-11
+
+Result: 36/36 checks passed
+
+Corrections verified:
+- Home / We Come to You image now fills its visual panel without an empty navy block.
+- Pickup & Return image and content remain one balanced business section.
+- Small-business photography is constrained to a service-card proportion instead of a poster-like oversized block.
+- Computer/Laptop repair image uses a controlled landscape crop.
+- Mobile-service vehicle proof remains shorter than core service photography.
+- Two-column layouts are retained at common desktop browser zoom levels; controlled stacking begins at 820 CSS px.
+- Mobile/tablet image heights are bounded to prevent oversized vertical sections.
+- WhatsApp, Surrey service-area content, structured data, and JavaScript syntax remain intact.
+
+Checks:
+PASS — single H1
+PASS — home section present
+PASS — pickup section present
+PASS — mobile service section present
+PASS — business section present
+PASS — repair section present
+PASS — Surrey present
+PASS — WhatsApp number present
+PASS — business phone present
+PASS — CSS brace balance
+PASS — final visual patch present
+PASS — no fixed empty home panel rule at end
+PASS — tablet breakpoint 820
+PASS — desktop zoom preservation
+PASS — alitechgrid-home-service.jpg exists
+PASS — alitechgrid-home-service.jpg web-resolution
+PASS — alitechgrid-pickup-service.jpg exists
+PASS — alitechgrid-pickup-service.jpg web-resolution
+PASS — alitechgrid-mobile-service.jpg exists
+PASS — alitechgrid-mobile-service.jpg web-resolution
+PASS — alitechgrid-business-service.jpg exists
+PASS — alitechgrid-business-service.jpg web-resolution
+PASS — alitechgrid-repair-service.jpg exists
+PASS — alitechgrid-repair-service.jpg web-resolution
+PASS — local ref assets/img/alitechgrid-home-service.jpg
+PASS — local ref assets/img/alitechgrid-pickup-service.jpg
+PASS — local ref assets/img/alitechgrid-mobile-service.jpg
+PASS — local ref assets/img/alitechgrid-business-service.jpg
+PASS — local ref assets/img/alitechgrid-repair-service.jpg
+PASS — local ref assets/js/whatsapp.js
+PASS — local ref assets/js/local-services.js
+PASS — local ref assets/css/local-it.css
+PASS — JS syntax assets/js/estimate.js
+PASS — JS syntax assets/js/local-services.js
+PASS — JS syntax assets/js/whatsapp.js
+PASS — structured data valid
