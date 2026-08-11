@@ -1,37 +1,43 @@
-AliTechGrid Canada — Dynamic Customer Service Homepage Update
-Build date: 2026-08-10
+AliTechGrid Canada — WhatsApp + On-Site Service + Estimator Update
 
-PURPOSE
-This patch changes the homepage from a static repair-shop hero into a customer-controlled service counter.
+This is a cumulative patch for the current customer-first/dynamic homepage and estimator design.
 
-NEW HOMEPAGE EXPERIENCE
-- Six accessible, radio-style service selectors: Desktop, Laptop, Mobile, Wi-Fi, Network, Router.
-- Selecting a service updates the problem list, service title and relevant details link without reloading the page.
-- Web Design is intentionally kept out of the repair selector and shown under Business Technology Services.
-- Business Technology Services: Website Design, Small-Business IT, Cloud & Business Email.
-- The full AliTechGrid Canada logo remains the primary site identity.
-- The repair-shop image is retained lower on the homepage as a high-quality trust/branding visual.
-- The image file is the exact 1254 × 1254 PNG supplied for the website update.
+Upload/replace these files in the repository root while preserving the rest of the production repository:
+- index.html
+- services.html
+- estimate.html
+- book.html
+- contact.html
+- assets/css/local-it.css
+- assets/css/estimate.css
+- assets/js/local-services.js
+- assets/js/estimate.js
+- assets/js/whatsapp.js
+- assets/img/alitechgrid-repair-workbench.png
 
-FILES TO UPLOAD / REPLACE
-1. index.html
-2. services.html
-3. assets/css/local-it.css
-4. assets/js/local-services.js   (NEW)
-5. assets/img/alitechgrid-repair-workbench.png
+DO NOT delete or replace unless intentionally changing them:
+- CNAME
+- assets/js/site-config.js (contains the live Zoho booking URL)
+- assets/js/main.js
+- assets/css/styles.css
+- websites.html, about.html, privacy.html, terms.html, accessibility.html
+- robots.txt, sitemap.xml and other production files
 
-IMPORTANT
-- Upload the files/folders INSIDE this package to the root of AliTechGridHQ/alitechgrid-ca.
-- Do NOT upload the ZIP file itself as the website.
-- Do NOT delete the existing CNAME, robots.txt, sitemap.xml, policy pages, assets/css/styles.css, assets/js/main.js, assets/js/site-config.js, booking configuration, chatbot files, logos or other existing production files.
-- Keep the new assets/js/local-services.js path exactly as supplied.
+WhatsApp Business configured in this update:
++1 672 671 9982
+Click-to-chat number: 16726719982
 
-AFTER DEPLOYMENT
-1. Open alitechgrid.ca in an InPrivate/Incognito browser window.
-2. Select all six service icons and confirm the solution panel changes immediately.
-3. Test Book Service, Call, Estimate and service-detail links.
-4. Check the homepage on desktop and a mobile phone.
-5. Confirm the repair-shop image loads sharply in the Professional Local Technology Support section.
+Suggested commit message:
+Add WhatsApp Business and on-site home service to customer estimate flow
 
-SUGGESTED GITHUB COMMIT MESSAGE
-Rebuild homepage with dynamic service selector and business technology services
+After GitHub Pages publishes, test in an InPrivate/private browser:
+1. Homepage service selector and service-specific preliminary-estimate link.
+2. Homepage WhatsApp buttons and floating WhatsApp button.
+3. Estimate Home vs Small Business selection.
+4. On-site option: $129 home planning minimum / $159 small-business planning minimum.
+5. First-time and multi-device discounts.
+6. WhatsApp Estimate opens a pre-filled conversation to +1 672 671 9982.
+7. Screenshot/photo preview remains local; attach the image manually inside WhatsApp.
+8. Zoho booking calendar still loads from the existing site-config.js.
+9. Call links use +1 778-358-4040.
+10. Test desktop and mobile layouts.

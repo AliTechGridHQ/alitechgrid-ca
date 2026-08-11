@@ -88,6 +88,8 @@
   const problems = document.querySelector("[data-panel-problems]");
   const icon = document.querySelector("[data-panel-icon]");
   const book = document.querySelector("[data-panel-book]");
+  const estimate = document.querySelector("[data-panel-estimate]");
+  const whatsapp = document.querySelector("[data-panel-whatsapp]");
   const details = document.querySelector("[data-panel-details]");
 
   if (!choices.length || !title || !description || !problems || !icon || !book || !details) return;
@@ -112,6 +114,11 @@
       return li;
     }));
     book.textContent = service.bookLabel;
+    if (estimate) estimate.href = `estimate.html?service=${encodeURIComponent(key)}`;
+    if (whatsapp) {
+      const message = `Hello AliTechGrid Canada. I need help with ${service.title}. My problem is: `;
+      whatsapp.href = window.ALITECHGRID_WHATSAPP?.makeUrl?.(message) || `https://wa.me/16726719982?text=${encodeURIComponent(message)}`;
+    }
     details.href = service.detailHref;
 
     if (focusPanel) title.focus?.({ preventScroll: true });

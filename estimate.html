@@ -1,246 +1,141 @@
 <!doctype html>
 <html lang="en-CA">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F9X2CTQ1C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6F9X2CTQ1C');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6F9X2CTQ1C');</script>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Request a Computer Repair Estimate | AliTechGrid Canada</title>
-  <meta name="description" content="Request an initial estimate for computer, laptop, mobile-device, on-site or small-business IT support in Coquitlam and nearby Greater Vancouver communities.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Instant Preliminary IT Service Estimate | AliTechGrid Canada</title>
+  <meta name="description" content="Get a preliminary labour estimate for standard computer, laptop, mobile, Wi-Fi, router and networking services from AliTechGrid Canada. First-time and eligible multi-device labour discounts are calculated automatically.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alitechgrid.ca/estimate.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="AliTechGrid Canada">
-  <meta property="og:title" content="Request a Computer Repair Estimate | AliTechGrid Canada">
-  <meta property="og:description" content="Provide your device, problem and location for an initial service estimate.">
-  <meta property="og:url" content="https://alitechgrid.ca/estimate.html">
-  <meta property="og:image" content="https://alitechgrid.ca/assets/img/alitechgrid-canada-logo.png">
-  <meta name="theme-color" content="#0b1733">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-    .estimate-layout { display:grid; grid-template-columns:1.2fr .8fr; gap:30px; align-items:start; }
-    .estimate-form { display:grid; gap:18px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); padding:30px; box-shadow:var(--shadow); }
-    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .estimate-form label { display:grid; gap:7px; font-weight:700; color:var(--navy-900); }
-    .estimate-form input, .estimate-form select, .estimate-form textarea { width:100%; border:1px solid #cbd5e4; border-radius:11px; padding:12px 13px; background:#fff; color:var(--ink); }
-    .estimate-form textarea { min-height:155px; resize:vertical; }
-    .estimate-form input:focus, .estimate-form select:focus, .estimate-form textarea:focus { outline:3px solid rgba(49,87,215,.18); border-color:var(--blue-600); }
-    .check-consent { display:flex !important; align-items:flex-start; gap:10px !important; font-weight:500 !important; color:var(--muted) !important; }
-    .check-consent input { width:auto; margin-top:5px; }
-    .estimate-help { background:var(--surface-alt); border:1px solid var(--line); border-radius:var(--radius-md); padding:28px; }
-    .estimate-help ol { padding-left:21px; }
-    .estimate-help li { margin:12px 0; }
-    .estimate-note { padding:17px 18px; background:#eef3ff; border:1px solid #c8d7ff; border-radius:13px; color:var(--navy-900); }
-    @media (max-width:850px) { .estimate-layout, .form-grid { grid-template-columns:1fr; } }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "name":"IT Repair and Support Estimate",
-    "provider":{"@type":"LocalBusiness","name":"AliTechGrid Canada","url":"https://alitechgrid.ca"},
-    "areaServed":["Coquitlam","Port Moody","Burnaby","New Westminster","Greater Vancouver"],
-    "serviceType":["Computer repair estimate","Laptop repair estimate","Mobile device repair assessment","On-site IT support estimate","Small-business IT support estimate"]
-  }
-  </script>
+  <meta property="og:type" content="website"><meta property="og:site_name" content="AliTechGrid Canada">
+  <meta property="og:title" content="Instant Preliminary IT Service Estimate | AliTechGrid Canada">
+  <meta property="og:description" content="Choose the service and problem to see an immediate preliminary labour range. Complex or parts-dependent work is sent for manual review.">
+  <meta property="og:url" content="https://alitechgrid.ca/estimate.html"><meta property="og:image" content="https://alitechgrid.ca/assets/img/alitechgrid-repair-workbench.png">
+  <meta name="theme-color" content="#071327">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/img/icon-180.png"><link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css"><link rel="stylesheet" href="assets/css/local-it.css"><link rel="stylesheet" href="assets/css/estimate.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Preliminary IT Repair and Support Estimate","provider":{"@type":"LocalBusiness","name":"AliTechGrid Canada","url":"https://alitechgrid.ca","telephone":"+1 778-358-4040"},"areaServed":["Coquitlam","Port Moody","Burnaby","New Westminster","Greater Vancouver"],"serviceType":["Computer repair estimate","Laptop repair estimate","Mobile device support estimate","Wi-Fi setup estimate","Router setup estimate","Network support estimate"]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html" aria-label="AliTechGrid Canada home">
-      <img src="assets/img/alitechgrid-canada-compact.png" alt="AliTechGrid Canada">
-    </a>
-    <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="main-nav">Menu</button>
-    <nav class="main-nav" id="main-nav" data-main-nav aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="book.html">Book Service</a>
-      <a href="estimate.html" aria-current="page">Request Estimate</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a class="button button-primary header-book" href="book.html" data-booking-link>Book service</a>
-  </div>
-</header>
+<header class="site-header"><div class="header-inner">
+  <a class="brand" href="index.html" aria-label="AliTechGrid Canada home"><img src="assets/img/alitechgrid-canada-compact.png" alt="AliTechGrid Canada"></a>
+  <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav class="main-nav" id="main-nav" data-main-nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="services.html">Repair & IT Services</a><a href="websites.html">Websites</a><a href="book.html">Book Service</a><a href="estimate.html" aria-current="page">Estimate</a><a href="contact.html">Contact</a></nav>
+  <a class="button button-primary header-book" href="book.html" data-booking-link>Book service</a>
+</div></header>
 
 <main id="main">
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">Initial service estimate</span>
-      <h1>Request an estimate</h1>
-      <p class="lead">Tell us the device, problem, location and preferred service option. We will review the request and respond with an initial estimate or recommend a diagnostic appointment.</p>
-    </div>
-  </section>
+<section class="estimate-hero"><div class="container">
+  <span class="estimate-kicker">PRELIMINARY ESTIMATE · STANDARD SERVICES</span>
+  <h1>Get an instant preliminary service estimate</h1>
+  <p class="estimate-hero-lead">Choose the device and problem. Standard labour ranges are calculated immediately. Parts-dependent, advanced recovery, physical damage and complex business work are reviewed manually before a quote is approved.</p>
+  <div class="discount-ribbon" aria-label="Available labour discounts"><span><strong>10% OFF</strong> eligible labour for first-time customers</span><span><strong>MULTI-DEVICE SAVINGS</strong> 10% off labour for each additional eligible device</span></div>
+</div></section>
 
-  <section class="section">
-    <div class="container estimate-layout">
-      <form class="estimate-form" id="estimate-form">
-        <div class="form-grid">
-          <label>Full name
-            <input name="name" autocomplete="name" required>
-          </label>
-          <label>Email address
-            <input name="email" type="email" autocomplete="email" required>
-          </label>
-        </div>
-        <div class="form-grid">
-          <label>Phone number
-            <input name="phone" type="tel" autocomplete="tel" placeholder="Optional">
-          </label>
-          <label>City / service location
-            <input name="city" autocomplete="address-level2" required placeholder="Example: Coquitlam">
-          </label>
-        </div>
-        <div class="form-grid">
-          <label>Service category
-            <select name="service" required>
-              <option value="">Select a service</option>
-              <option>Computer or laptop repair</option>
-              <option>Mobile phone or tablet assessment</option>
-              <option>Wi-Fi, network or installation</option>
-              <option>Data transfer or device setup</option>
-              <option>On-site home IT support</option>
-              <option>Small-business IT support</option>
-              <option>Other IT service</option>
-            </select>
-          </label>
-          <label>Preferred service option
-            <select name="serviceOption" required>
-              <option value="">Select an option</option>
-              <option>Pickup and drop-off</option>
-              <option>On-site service</option>
-              <option>Confirmed service location</option>
-              <option>Remote support, if suitable</option>
-              <option>Not sure</option>
-            </select>
-          </label>
-        </div>
-        <div class="form-grid">
-          <label>Device type
-            <input name="deviceType" required placeholder="Laptop, desktop, phone, router...">
-          </label>
-          <label>Brand and model
-            <input name="model" required placeholder="Example: Lenovo ThinkPad T14">
-          </label>
-        </div>
-        <label>Problem description
-          <textarea name="problem" required placeholder="Describe what happened, error messages, symptoms, and any steps already tried."></textarea>
-        </label>
-        <div class="form-grid">
-          <label>When did the problem start?
-            <input name="started" placeholder="Example: Yesterday, after an update">
-          </label>
-          <label>How soon is service needed?
-            <select name="urgency">
-              <option>Flexible</option>
-              <option>Within 2–3 days</option>
-              <option>As soon as available</option>
-            </select>
-          </label>
-        </div>
-        <label class="check-consent">
-          <input type="checkbox" required>
-          <span>I understand this is an initial estimate based on the information provided. A diagnostic appointment may be required before a final quotation, parts approval or repair commitment.</span>
-        </label>
-        <button class="button button-primary" type="submit">Prepare estimate request</button>
-        <p class="muted">This form opens your email application with the completed request addressed to <strong>sales@alitechgrid.com</strong>. The website does not store the form information.</p>
-      </form>
+<section class="section estimator-section"><div class="container estimator-layout">
+  <form class="estimator-builder" id="instant-estimator" novalidate>
+    <section class="estimate-step-card" aria-labelledby="est-step-1">
+      <div class="estimate-step-heading"><span>STEP 1</span><div><h2 id="est-step-1">Choose the service</h2><p>Select the device or technology that needs help.</p></div></div>
+      <div class="estimate-service-grid" role="radiogroup" aria-label="Estimate service">
+        <button type="button" class="estimate-service-choice is-active" role="radio" aria-checked="true" data-est-service="desktop"><span class="est-icon">PC</span><strong>Desktop</strong><small>Repair & setup</small></button>
+        <button type="button" class="estimate-service-choice" role="radio" aria-checked="false" data-est-service="laptop"><span class="est-icon">LT</span><strong>Laptop</strong><small>Repair & upgrade</small></button>
+        <button type="button" class="estimate-service-choice" role="radio" aria-checked="false" data-est-service="mobile"><span class="est-icon">MB</span><strong>Mobile</strong><small>Device support</small></button>
+        <button type="button" class="estimate-service-choice" role="radio" aria-checked="false" data-est-service="wifi"><span class="est-icon">Wi</span><strong>Wi-Fi</strong><small>Troubleshooting</small></button>
+        <button type="button" class="estimate-service-choice" role="radio" aria-checked="false" data-est-service="network"><span class="est-icon">NW</span><strong>Network</strong><small>Switch & devices</small></button>
+        <button type="button" class="estimate-service-choice" role="radio" aria-checked="false" data-est-service="router"><span class="est-icon">RT</span><strong>Router</strong><small>Setup & support</small></button>
+      </div>
+    </section>
 
-      <aside class="estimate-help">
-        <h2>How estimates work</h2>
-        <ol>
-          <li>Submit the device, problem and service location.</li>
-          <li>AliTechGrid reviews the information and confirms whether an estimate can be provided remotely.</li>
-          <li>If diagnosis is required, the diagnostic, travel or pickup fee is confirmed before service.</li>
-          <li>A final quotation is provided for approval before additional labour or parts.</li>
-          <li>Approved work is completed, tested and invoiced.</li>
-        </ol>
-        <div class="estimate-note">
-          <strong>Important:</strong> Do not enter passwords, payment-card information or confidential files. After the prepared email opens, you may attach useful photos of the device or visible damage.
+    <section class="estimate-step-card" aria-labelledby="est-step-2">
+      <div class="estimate-step-heading"><span>STEP 2</span><div><h2 id="est-step-2">Choose the problem</h2><p>Pick the closest match. Choose manual review if you are unsure.</p></div></div>
+      <div class="estimate-field"><span>Who is the service for?</span>
+        <div class="customer-type-grid" role="radiogroup" aria-label="Choose home or small-business service">
+          <button type="button" class="customer-type-choice is-active" role="radio" aria-checked="true" data-customer-type="home"><strong>Home / Personal</strong><small>Residential and home-office support</small></button>
+          <button type="button" class="customer-type-choice" role="radio" aria-checked="false" data-customer-type="business"><strong>Small Business</strong><small>Workstations, office Wi-Fi and business IT</small></button>
         </div>
-        <div class="button-row">
-          <a class="button button-secondary" href="book.html" data-booking-link>Book a diagnostic instead</a>
-        </div>
-      </aside>
+      </div>
+      <label class="estimate-field">Problem or service
+        <select id="estimate-issue" name="issue" required data-est-issue></select>
+      </label>
+      <div class="estimate-two-col">
+        <label class="estimate-field" data-quantity-wrap>Number of eligible devices
+          <select id="estimate-quantity" name="quantity" data-est-quantity><option value="1">1 device</option><option value="2">2 devices</option><option value="3">3 devices</option><option value="4">4 devices</option><option value="5">5 devices</option></select>
+          <small data-quantity-note>Multi-device saving applies when 2 or more eligible devices are serviced under the same request.</small>
+        </label>
+        <label class="estimate-field">Preferred service option
+          <select name="serviceOption" data-service-option><option value="not-sure">Not sure</option><option value="onsite">On-site — we come to you</option><option value="pickup">Pickup / return by arrangement</option><option value="remote">Remote support, if suitable</option><option value="location">Confirmed service location</option></select>
+        </label>
+      </div>
+      <label class="estimate-check"><input type="checkbox" name="firstTime" data-first-time><span><strong>First time with AliTechGrid</strong><small>Apply 10% discount to eligible labour in this preliminary estimate.</small></span></label>
+    </section>
+
+    <section class="estimate-step-card" aria-labelledby="est-step-3">
+      <div class="estimate-step-heading"><span>STEP 3</span><div><h2 id="est-step-3">Add useful details</h2><p>These details help if you send the estimate for manual review.</p></div></div>
+      <div class="estimate-two-col">
+        <label class="estimate-field">Brand / model <input name="model" placeholder="Example: Lenovo ThinkPad T14"></label>
+        <label class="estimate-field">City / service location <input name="city" autocomplete="address-level2" placeholder="Example: Coquitlam"></label>
+      </div>
+      <label class="estimate-field">Problem description <textarea name="problem" placeholder="What happened? Include visible error messages, symptoms and anything already tried."></textarea></label>
+
+      <div class="evidence-box" id="evidence">
+        <div class="evidence-copy"><strong>Screenshot or photo (optional)</strong><span>Useful for error messages, visible damage, model labels, router lights or network equipment.</span></div>
+        <label class="evidence-button">Choose screenshot / photo<input type="file" accept="image/png,image/jpeg,image/webp" capture="environment" data-evidence-input></label>
+        <div class="evidence-preview" data-evidence-preview hidden><img data-evidence-image alt="Selected screenshot or photo preview"><div><strong data-evidence-name></strong><span data-evidence-meta></span><button type="button" data-evidence-remove>Remove</button></div></div>
+        <p class="evidence-local"><strong>Privacy:</strong> The selected image is previewed only in your browser and is <strong>not uploaded by this static page</strong>. Remove or hide passwords, banking information, IDs, health information and confidential business data. If you prepare an email request, attach the image to the email after it opens.</p>
+        <a class="secure-upload-link" href="#" data-secure-upload hidden>Open secure upload form</a>
+      </div>
+    </section>
+
+    <section class="estimate-step-card contact-review" aria-labelledby="est-step-4">
+      <div class="estimate-step-heading"><span>OPTIONAL</span><div><h2 id="est-step-4">Contact details for manual review</h2><p>You can see the instant estimate without providing personal information.</p></div></div>
+      <div class="estimate-two-col"><label class="estimate-field">Name <input name="name" autocomplete="name"></label><label class="estimate-field">Email <input name="email" type="email" autocomplete="email"></label></div>
+      <label class="estimate-field">Phone <input name="phone" type="tel" autocomplete="tel" placeholder="Optional"></label>
+    </section>
+  </form>
+
+  <aside class="estimate-result" aria-live="polite" aria-atomic="true">
+    <div class="result-eyebrow">YOUR PRELIMINARY ESTIMATE · <span data-estimate-id></span></div>
+    <h2 data-result-title>Desktop Computer</h2>
+    <p class="result-issue" data-result-issue>Diagnostic & troubleshooting</p>
+
+    <div class="manual-review" data-manual-review hidden><strong>Manual estimate required</strong><p>This problem depends on parts, physical condition, recovery complexity or business scope. Send the details for review or book a diagnostic.</p></div>
+
+    <div data-standard-result>
+      <div class="price-range"><span data-result-price-label>Estimated eligible labour</span><strong data-result-price>$79–$119 CAD</strong><small>Preliminary range before tax, parts, licences and any approved travel.</small></div>
+      <div class="discount-summary" data-discount-summary>
+        <div><span>Standard labour range</span><strong data-base-price>$79–$119</strong></div>
+        <div data-first-discount-row hidden><span>First-time discount</span><strong data-first-discount></strong></div>
+        <div data-multi-discount-row hidden><span>Multi-device discount</span><strong data-multi-discount></strong></div>
+        <div class="discount-total" data-savings-row hidden><span>Estimated labour savings</span><strong data-total-savings></strong></div>
+        <div data-onsite-row hidden><span>On-site service-call minimum</span><strong data-onsite-minimum></strong></div>
+      </div>
+      <p class="service-mode-note" data-service-mode-note>Service method is confirmed before work begins.</p>
+
+      <div class="tax-planning">
+        <h3>Tax planning</h3>
+        <div><span>GST 5% <small>if applicable</small></span><strong data-gst-planning></strong></div>
+        <div><span>PST 7% <small data-pst-label>scope dependent</small></span><strong data-pst-planning></strong></div>
+        <p data-tax-note>Applicable GST/PST, if any, is finalized on the approved quote or invoice based on the actual service and AliTechGrid's tax collection obligations.</p>
+      </div>
     </div>
-  </section>
+
+    <div class="estimate-conditions">
+      <strong>Important</strong>
+      <ul><li>This is a planning estimate, not a binding quotation.</li><li>Discounts apply to eligible labour only; parts and third-party costs are excluded.</li><li>Multi-device savings apply to additional eligible desktop, laptop or mobile devices in the same request.</li><li>Combined promotional labour discount is capped at 20%.</li><li>Promotions do not reduce an applicable on-site service-call minimum; extended travel and additional time are approved first.</li></ul>
+    </div>
+
+    <div class="estimate-result-actions"><a class="button button-primary" href="book.html" data-booking-link>Book service</a><a class="button button-whatsapp" href="https://wa.me/16726719982" data-est-whatsapp target="_blank" rel="noopener noreferrer">WhatsApp estimate</a><button type="button" class="button button-secondary" data-prepare-request>Prepare request email</button></div>
+    <a class="result-details" href="services.html" data-result-details>View service details →</a>
+  </aside>
+</div></section>
+
+<section class="section-sm surface-alt"><div class="container"><div class="estimate-explainer"><div><h2>What gets an instant range?</h2><p>Common troubleshooting, setup, software work, standard upgrades and straightforward Wi-Fi/router/network tasks.</p></div><div><h2>What needs manual review?</h2><p>Physical damage, parts replacement, advanced data recovery, liquid damage, unknown hardware failure, large networks and custom business projects.</p></div></div></div></section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="assets/img/alitechgrid-canada-logo.png" alt="AliTechGrid Canada">
-        <p>Practical IT support, repair and installation for homes and small businesses in Coquitlam and nearby Greater Vancouver communities.</p>
-      </div>
-      <div>
-        <h3>Company</h3>
-        <ul class="footer-links">
-          <li><a href="about.html">About AliTechGrid</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="book.html">Book a diagnostic</a></li>
-          <li><a href="estimate.html">Request an estimate</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Policies</h3>
-        <ul class="footer-links">
-          <li><a href="privacy.html">Privacy policy</a></li>
-          <li><a href="terms.html">Service terms</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span data-current-year></span> AliTechGrid Canada. All rights reserved.</span>
-      <span>Initial estimates are subject to diagnosis, service scope and parts availability.</span>
-    </div>
-  </div>
-</footer>
-<script src="assets/js/site-config.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-(() => {
-  const form = document.getElementById('estimate-form');
-  if (!form) return;
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const subject = encodeURIComponent(`Estimate request - ${data.get('deviceType')} ${data.get('model')}`);
-    const body = encodeURIComponent(
-`REQUEST FOR INITIAL ESTIMATE
-
-Customer name: ${data.get('name')}
-Email: ${data.get('email')}
-Phone: ${data.get('phone') || 'Not provided'}
-City / service location: ${data.get('city')}
-
-Service category: ${data.get('service')}
-Preferred service option: ${data.get('serviceOption')}
-Device type: ${data.get('deviceType')}
-Brand and model: ${data.get('model')}
-Problem started: ${data.get('started') || 'Not specified'}
-Urgency: ${data.get('urgency') || 'Flexible'}
-
-Problem description:
-${data.get('problem')}
-
-I understand that this is an initial estimate and that diagnosis may be required before a final quotation or repair approval.`
-    );
-    window.location.href = `mailto:sales@alitechgrid.com?subject=${subject}&body=${body}`;
-  });
-})();
-</script>
-</body>
-</html>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><img class="footer-logo" src="assets/img/alitechgrid-canada-logo.png" alt="AliTechGrid Canada"><p>Proudly Canadian local computer repair, Wi-Fi and network help, mobile-device support, small-business IT and website design for Coquitlam and nearby Greater Vancouver communities.</p><p><strong>Call:</strong> <a href="tel:+17783584040">+1 778-358-4040</a><br><strong>WhatsApp:</strong> <a href="https://wa.me/16726719982" data-whatsapp-link>+1 672 671 9982</a></p></div><div><h3>Services</h3><ul class="footer-links"><li><a href="services.html">Repair & IT services</a></li><li><a href="websites.html">Website design</a></li><li><a href="book.html">Book a service</a></li><li><a href="estimate.html">Preliminary estimate</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Company</h3><ul class="footer-links"><li><a href="about.html">About AliTechGrid</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Service terms</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div></div><div class="footer-bottom"><span>© <span data-current-year></span> AliTechGrid Canada. All rights reserved.</span><span>Preliminary estimates are subject to final diagnosis, service scope, discounts, taxes and parts availability.</span></div></div></footer>
+<a class="whatsapp-float" href="https://wa.me/16726719982" data-whatsapp-link data-whatsapp-message="Hello AliTechGrid Canada. I need help with a technology issue." aria-label="Chat with AliTechGrid Canada on WhatsApp"><span class="whatsapp-float-icon" aria-hidden="true">WA</span><span>WhatsApp</span></a>
+<script src="assets/js/site-config.js"></script><script src="assets/js/main.js"></script><script src="assets/js/whatsapp.js"></script><script src="assets/js/estimate.js"></script>
+</body></html>

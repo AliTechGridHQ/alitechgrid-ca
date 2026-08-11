@@ -1,76 +1,204 @@
-AliTechGrid Canada — Dynamic Customer Service Homepage Verification
-Build date: 2026-08-10
+AliTechGrid Canada — WhatsApp Business + On-Site Service + Estimator Verification
 
-01. [PASS] Required file present: index.html
-02. [PASS] Required file present: services.html
-03. [PASS] Required file present: assets/css/local-it.css
-04. [PASS] Required file present: assets/js/local-services.js
-05. [PASS] Required file present: assets/img/alitechgrid-repair-workbench.png
-06. [PASS] Required file present: README_DEPLOY.txt
-07. [PASS] Homepage parses with a document title
-08. [PASS] Homepage has exactly one H1 — 1
-09. [PASS] Customer-first H1 is present
-10. [PASS] Canadian local service badge is present
-11. [PASS] Greater Vancouver service-area statement is present
-12. [PASS] Primary header uses full AliTechGrid Canada logo
-13. [PASS] Open Graph image uses repair-shop PNG
-14. [PASS] LocalBusiness structured data is present
-15. [PASS] GA4 identifier retained
-16. [PASS] Business phone retained
-17. [PASS] Booking hook retained
-18. [PASS] Estimate link retained
-19. [PASS] Exactly 6 repair service selectors — 6
-20. [PASS] Selector services are Desktop/Laptop/Mobile/Wi-Fi/Network/Router — ['desktop', 'laptop', 'mobile', 'wifi', 'network', 'router']
-21. [PASS] Web Design is not mixed into repair selector
-22. [PASS] Service selector uses radiogroup semantics
-23. [PASS] Each service selector uses role=radio
-24. [PASS] Exactly one default selector is checked
-25. [PASS] Each selector contains an inline SVG icon
-26. [PASS] Dynamic panel has live-region semantics
-27. [PASS] Dynamic panel has title target
-28. [PASS] Dynamic panel has problem-list target
-29. [PASS] Dynamic panel has booking action
-30. [PASS] Dynamic panel has estimate action
-31. [PASS] Dynamic panel has service-details action
-32. [PASS] Homepage loads local-services.js
-33. [PASS] Exactly 3 business-service cards — 3
-34. [PASS] Business services include Website Design
-35. [PASS] Business services include Small-Business IT
-36. [PASS] Business services include Cloud & Business Email
-37. [PASS] Website Design links to websites page
-38. [PASS] Repair-shop image retained in lower trust section
-39. [PASS] Repair-shop image path is PNG
-40. [PASS] Repair-shop image has descriptive alt text
-41. [PASS] Repair-shop image is lazy-loaded below the fold
-42. [PASS] Repair-shop image resolution is 1254 x 1254 — (1254, 1254)
-43. [PASS] Repair-shop image remains PNG — PNG
-44. [PASS] Delivered repair-shop image exactly matches supplied source image
-45. [PASS] Services page retains one H1
-46. [PASS] Services page retains all main anchors
-47. [PASS] Services page retains local Canadian wording
-48. [PASS] Services page keeps booking, call and estimate actions
-49. [PASS] CSS braces are balanced — 262/262
-50. [PASS] Dynamic hero styles present
-51. [PASS] Selector selected-state style present
-52. [PASS] Keyboard focus-visible style present
-53. [PASS] Desktop 3-column selector layout present
-54. [PASS] Mobile 2-column selector layout present
-55. [PASS] Small mobile breakpoint present
-56. [PASS] Business service desktop grid present
-57. [PASS] Lower image uses responsive width
-58. [PASS] local-services.js passes Node syntax check
-59. [PASS] Dynamic service data exists: desktop
-60. [PASS] Dynamic service data exists: laptop
-61. [PASS] Dynamic service data exists: mobile
-62. [PASS] Dynamic service data exists: wifi
-63. [PASS] Dynamic service data exists: network
-64. [PASS] Dynamic service data exists: router
-65. [PASS] Dynamic JS updates aria-checked state
-66. [PASS] Dynamic JS supports keyboard arrow navigation
-67. [PASS] Dynamic JS updates panel problem list
-68. [PASS] Dynamic JS updates service details href
-69. [PASS] Dynamic selector functional harness passes — PASS click handler attached to all 6 service selectors | PASS Laptop selection updates title | PASS Laptop selection updates compact icon | PASS Laptop selection updates 4 customer problems | PASS ARIA radio state updates | PASS Laptop details link targets computer service section | PASS Arrow-key radio navigation prevents default scrolling | PASS ArrowRight moves selection to Mobile | PASS Keyboard selection updates ARIA state | PASS Router selection updates correct service panel and details link
+001. [PASS] File exists: index.html
+002. [PASS] File exists: services.html
+003. [PASS] File exists: estimate.html
+004. [PASS] File exists: book.html
+005. [PASS] File exists: contact.html
+006. [PASS] File exists: assets/css/local-it.css
+007. [PASS] File exists: assets/css/estimate.css
+008. [PASS] File exists: assets/js/local-services.js
+009. [PASS] File exists: assets/js/estimate.js
+010. [PASS] File exists: assets/js/whatsapp.js
+011. [PASS] File exists: assets/img/alitechgrid-repair-workbench.png
+012. [PASS] File exists: README_DEPLOY.txt
+013. [PASS] File exists: PRICING_TAX_WHATSAPP_CONFIG.md
+014. [PASS] index.html: HTML5 doctype
+015. [PASS] index.html: lang en-CA
+016. [PASS] index.html: viewport
+017. [PASS] index.html: title
+018. [PASS] index.html: canonical
+019. [PASS] index.html: exactly one H1 (1)
+020. [PASS] index.html: skip link
+021. [PASS] index.html: no duplicate ids
+022. [PASS] index.html: GA4 retained
+023. [PASS] index.html: main phone retained
+024. [PASS] index.html: WhatsApp helper loaded
+025. [PASS] index.html: floating WhatsApp control
+026. [PASS] index.html: WhatsApp click-to-chat number
+027. [PASS] index.html: visible WhatsApp number
+028. [PASS] index.html: no placeholder WhatsApp number
+029. [PASS] services.html: HTML5 doctype
+030. [PASS] services.html: lang en-CA
+031. [PASS] services.html: viewport
+032. [PASS] services.html: title
+033. [PASS] services.html: canonical
+034. [PASS] services.html: exactly one H1 (1)
+035. [PASS] services.html: skip link
+036. [PASS] services.html: no duplicate ids
+037. [PASS] services.html: GA4 retained
+038. [PASS] services.html: main phone retained
+039. [PASS] services.html: WhatsApp helper loaded
+040. [PASS] services.html: floating WhatsApp control
+041. [PASS] services.html: WhatsApp click-to-chat number
+042. [PASS] services.html: visible WhatsApp number
+043. [PASS] services.html: no placeholder WhatsApp number
+044. [PASS] estimate.html: HTML5 doctype
+045. [PASS] estimate.html: lang en-CA
+046. [PASS] estimate.html: viewport
+047. [PASS] estimate.html: title
+048. [PASS] estimate.html: canonical
+049. [PASS] estimate.html: exactly one H1 (1)
+050. [PASS] estimate.html: skip link
+051. [PASS] estimate.html: no duplicate ids
+052. [PASS] estimate.html: GA4 retained
+053. [PASS] estimate.html: main phone retained
+054. [PASS] estimate.html: WhatsApp helper loaded
+055. [PASS] estimate.html: floating WhatsApp control
+056. [PASS] estimate.html: WhatsApp click-to-chat number
+057. [PASS] estimate.html: visible WhatsApp number
+058. [PASS] estimate.html: no placeholder WhatsApp number
+059. [PASS] book.html: HTML5 doctype
+060. [PASS] book.html: lang en-CA
+061. [PASS] book.html: viewport
+062. [PASS] book.html: title
+063. [PASS] book.html: canonical
+064. [PASS] book.html: exactly one H1 (1)
+065. [PASS] book.html: skip link
+066. [PASS] book.html: no duplicate ids
+067. [PASS] book.html: GA4 retained
+068. [PASS] book.html: main phone retained
+069. [PASS] book.html: WhatsApp helper loaded
+070. [PASS] book.html: floating WhatsApp control
+071. [PASS] book.html: WhatsApp click-to-chat number
+072. [PASS] book.html: visible WhatsApp number
+073. [PASS] book.html: no placeholder WhatsApp number
+074. [PASS] contact.html: HTML5 doctype
+075. [PASS] contact.html: lang en-CA
+076. [PASS] contact.html: viewport
+077. [PASS] contact.html: title
+078. [PASS] contact.html: canonical
+079. [PASS] contact.html: exactly one H1 (1)
+080. [PASS] contact.html: skip link
+081. [PASS] contact.html: no duplicate ids
+082. [PASS] contact.html: GA4 retained
+083. [PASS] contact.html: main phone retained
+084. [PASS] contact.html: WhatsApp helper loaded
+085. [PASS] contact.html: floating WhatsApp control
+086. [PASS] contact.html: WhatsApp click-to-chat number
+087. [PASS] contact.html: visible WhatsApp number
+088. [PASS] contact.html: no placeholder WhatsApp number
+089. [PASS] Homepage has 6 dynamic service choices (6)
+090. [PASS] Homepage service choices are radio style
+091. [PASS] Homepage panel has WhatsApp action
+092. [PASS] Homepage panel has estimate action
+093. [PASS] Homepage service-delivery section
+094. [PASS] Homepage has We Come to You card
+095. [PASS] Homepage has Pickup & Return card
+096. [PASS] Homepage has WhatsApp Support card
+097. [PASS] Homepage service-area wording
+098. [PASS] Homepage business services remain separate
+099. [PASS] Homepage repair image retained
+100. [PASS] Homepage hero contact has 4 choices (4)
+101. [PASS] Services hero WhatsApp action
+102. [PASS] Services emphasizes We come to you
+103. [PASS] Services on-site anchor remains
+104. [PASS] Services estimate on-site CTA
+105. [PASS] Services key anchors retained
+106. [PASS] Booking WhatsApp hero CTA
+107. [PASS] Booking service choice strip
+108. [PASS] Booking says we come to you
+109. [PASS] Booking keeps photo estimator link
+110. [PASS] Booking retains data-booking-frame
+111. [PASS] Booking retains site-config integration
+112. [PASS] Booking avoids promising direct upload
+113. [PASS] Contact has 4 primary channels (4)
+114. [PASS] Contact WhatsApp channel
+115. [PASS] Contact has call channel
+116. [PASS] Contact has email channel
+117. [PASS] Contact has booking channel
+118. [PASS] Contact clearly says no public walk-in storefront
+119. [PASS] Contact shows service area
+120. [PASS] Contact privacy warning for screenshots
+121. [PASS] Contact WhatsApp response-hours wording
+122. [PASS] Estimator still has 6 service choices (6)
+123. [PASS] Estimator has Home and Business choices
+124. [PASS] Estimator customer choices radio style
+125. [PASS] Estimator has on-site option
+126. [PASS] Estimator has pickup option
+127. [PASS] Estimator has remote option
+128. [PASS] Estimator has screenshot/photo input
+129. [PASS] Estimator photo accepts only image types
+130. [PASS] Estimator privacy says image not uploaded
+131. [PASS] Estimator has WhatsApp estimate action
+132. [PASS] Estimator has estimate ID placeholder
+133. [PASS] Estimator has on-site minimum row
+134. [PASS] Estimator has tax planning section
+135. [PASS] Estimator has first-time discount text
+136. [PASS] Estimator has multi-device condition
+137. [PASS] Estimator states 20% cap
+138. [PASS] Estimator says promos do not reduce onsite minimum
+139. [PASS] WhatsApp JS exact digits
+140. [PASS] WhatsApp JS display number
+141. [PASS] WhatsApp JS uses wa.me
+142. [PASS] WhatsApp JS URL-encodes messages
+143. [PASS] WhatsApp JS exports for tests
+144. [PASS] Estimator defines 10% first-time discount
+145. [PASS] Estimator defines 10% additional-device discount
+146. [PASS] Estimator defines 20% cap
+147. [PASS] Estimator defines GST 5%
+148. [PASS] Estimator defines PST 7%
+149. [PASS] Estimator defines home onsite minimum
+150. [PASS] Estimator defines business onsite minimum
+151. [PASS] Estimator supports customer type URL
+152. [PASS] Estimator WhatsApp message includes Estimate ID
+153. [PASS] Estimator WhatsApp message includes customer type
+154. [PASS] Estimator WhatsApp message includes service mode
+155. [PASS] Estimator WhatsApp reminds attach selected image
+156. [PASS] Local service JS preselects estimator
+157. [PASS] Local service JS creates service-specific WhatsApp
+158. [PASS] Local CSS has WhatsApp button style
+159. [PASS] Local CSS has floating WhatsApp style
+160. [PASS] Local CSS has service delivery grid
+161. [PASS] Local CSS has contact channel grid
+162. [PASS] Local CSS mobile breakpoint
+163. [PASS] Estimator CSS customer type styles
+164. [PASS] Estimator CSS service mode note
+165. [PASS] Estimator CSS mobile customer layout
+166. [PASS] CSS braces balanced local-it (311/311)
+167. [PASS] CSS braces balanced estimate (116/116)
+168. [PASS] Repair image PNG (PNG)
+169. [PASS] Repair image 1254x1254 ((1254, 1254))
+170. [PASS] Repair image exact approved source
+171. [PASS] index.html: structured data valid JSON (1)
+172. [PASS] services.html: structured data valid JSON (1)
+173. [PASS] estimate.html: structured data valid JSON (1)
+174. [PASS] contact.html: structured data valid JSON (1)
+175. [PASS] index.html: local references resolve against patch/base
+176. [PASS] services.html: local references resolve against patch/base
+177. [PASS] estimate.html: local references resolve against patch/base
+178. [PASS] book.html: local references resolve against patch/base
+179. [PASS] contact.html: local references resolve against patch/base
+180. [PASS] JavaScript syntax: assets/js/whatsapp.js
+181. [PASS] JavaScript syntax: assets/js/local-services.js
+182. [PASS] JavaScript syntax: assets/js/estimate.js
+183. [PASS] Estimator + WhatsApp executable logic tests (Estimator/WhatsApp logic tests: PASS)
+184. [PASS] No claim of 24/7 human WhatsApp response
+185. [PASS] No claim of public storefront
+186. [PASS] No guarantee wording for repairs
+187. [PASS] On-site remains subject to confirmation
+188. [PASS] WhatsApp photo flow does not claim website upload
+189. [PASS] Local HTTP serve: index.html (HTTP 200)
+190. [PASS] Local HTTP serve: services.html (HTTP 200)
+191. [PASS] Local HTTP serve: estimate.html (HTTP 200)
+192. [PASS] Local HTTP serve: book.html (HTTP 200)
+193. [PASS] Local HTTP serve: contact.html (HTTP 200)
+194. [PASS] Local HTTP serve: assets/js/whatsapp.js (HTTP 200)
+195. [PASS] Local HTTP serve: assets/js/estimate.js (HTTP 200)
+196. [PASS] Local HTTP serve: assets/css/local-it.css (HTTP 200)
 
-Total checks: 69
-Passed: 69
+Total checks: 196
+Passed: 196
 Failed: 0
+
+Verification scope: static HTML/CSS/reference checks, executable JavaScript syntax and pricing logic tests, approved image-integrity check, and local HTTP serving. A full Chromium screenshot render using remote production base assets was not counted because the container could not complete that remote-asset render within its test window.
