@@ -1,59 +1,56 @@
-AliTechGrid Canada Final Website Update - Verification Report
+AliTechGrid Canada Final Mobile-Service Website Validation
 Date: 2026-08-11
 
-Result: 39/39 automated checks passed.
+Result: 47/47 checks passed.
 
-Scope:
-- Interactive customer-first hero and six service choices
-- Dedicated high-visibility Pickup & Return section
-- Four business-value images used once each
-- Responsive image size/crop constraints
-- Verified phone and WhatsApp integration
-- Node JavaScript syntax checks
-- CSS structural validation
-- Image integrity, landscape dimensions and web weight
-- Removal of Tesla/GTA/unsupported satisfaction claims
-- Local HTTP smoke test
+Scope: homepage structure, selected image integration, image dimensions/weight, visible-image uniqueness, contact hooks, marketing-claim hygiene, local-reference resolution, and JavaScript syntax checks (estimate.js, local-services.js, whatsapp.js).
 
-Passed checks:
-- PASS: single H1 (1)
-- PASS: interactive service picker
-- PASS: six service choices (6)
-- PASS: pickup feature section
-- PASS: pickup headline
-- PASS: pickup arrange CTA
-- PASS: pickup WhatsApp message
-- PASS: alitechgrid-home-service.jpg used once in body images (1)
-- PASS: alitechgrid-pickup-service.jpg used once in body images (1)
-- PASS: alitechgrid-business-service.jpg used once in body images (1)
-- PASS: alitechgrid-repair-service.jpg used once in body images (1)
-- PASS: verified phone
-- PASS: verified WhatsApp
-- PASS: no Tesla wording
-- PASS: no GTA wording
-- PASS: no 100% satisfaction claim
-- PASS: pickup responsive CSS
-- PASS: onsite image bounded
-- PASS: repair image bounded
-- PASS: CSS braces balanced (393/393)
-- PASS: alitechgrid-home-service.jpg exists
-- PASS: alitechgrid-home-service.jpg landscape (1200x720)
-- PASS: alitechgrid-home-service.jpg <500KB (149291)
-- PASS: alitechgrid-pickup-service.jpg exists
-- PASS: alitechgrid-pickup-service.jpg landscape (1200x720)
-- PASS: alitechgrid-pickup-service.jpg <500KB (137860)
-- PASS: alitechgrid-business-service.jpg exists
-- PASS: alitechgrid-business-service.jpg landscape (1200x720)
-- PASS: alitechgrid-business-service.jpg <500KB (149174)
-- PASS: alitechgrid-repair-service.jpg exists
-- PASS: alitechgrid-repair-service.jpg landscape (1200x720)
-- PASS: alitechgrid-repair-service.jpg <500KB (159300)
-- PASS: critical local ref assets/css/local-it.css
-- PASS: critical local ref assets/js/local-services.js
-- PASS: critical local ref assets/js/whatsapp.js
-- PASS: critical local ref assets/img/alitechgrid-home-service.jpg
-- PASS: critical local ref assets/img/alitechgrid-pickup-service.jpg
-- PASS: critical local ref assets/img/alitechgrid-business-service.jpg
-- PASS: critical local ref assets/img/alitechgrid-repair-service.jpg
+PASS - single H1
+PASS - interactive hero selector
+PASS - WhatsApp number present
+PASS - phone present
+PASS - pickup full section
+PASS - mobile service proof strip
+PASS - alitechgrid-home-service.jpg exists
+PASS - alitechgrid-home-service.jpg usable dimensions
+PASS - alitechgrid-home-service.jpg reasonable weight
+PASS - alitechgrid-home-service.jpg used once as visible img
+PASS - alitechgrid-pickup-service.jpg exists
+PASS - alitechgrid-pickup-service.jpg usable dimensions
+PASS - alitechgrid-pickup-service.jpg reasonable weight
+PASS - alitechgrid-pickup-service.jpg used once as visible img
+PASS - alitechgrid-mobile-service.jpg exists
+PASS - alitechgrid-mobile-service.jpg usable dimensions
+PASS - alitechgrid-mobile-service.jpg reasonable weight
+PASS - alitechgrid-mobile-service.jpg used once as visible img
+PASS - alitechgrid-business-service.jpg exists
+PASS - alitechgrid-business-service.jpg usable dimensions
+PASS - alitechgrid-business-service.jpg reasonable weight
+PASS - alitechgrid-business-service.jpg used once as visible img
+PASS - alitechgrid-repair-service.jpg exists
+PASS - alitechgrid-repair-service.jpg usable dimensions
+PASS - alitechgrid-repair-service.jpg reasonable weight
+PASS - alitechgrid-repair-service.jpg used once as visible img
+PASS - no 1-888-ATG
+PASS - no GTA & Surrounding
+PASS - no 100% Satisfaction Guaranteed
+PASS - no Tesla Mobile Tech Support
+PASS - vehicle copy scoped
+PASS - ref assets/img/favicon.svg
+PASS - ref assets/img/icon-180.png
+PASS - ref manifest.webmanifest
+PASS - ref assets/css/styles.css
+PASS - ref assets/css/local-it.css
+PASS - ref assets/js/site-config.js
+PASS - ref assets/js/main.js
+PASS - ref assets/js/whatsapp.js
+PASS - ref assets/js/local-services.js
+PASS - ref assets/img/alitechgrid-canada-compact.png
+PASS - ref assets/img/alitechgrid-home-service.jpg
+PASS - ref assets/img/alitechgrid-pickup-service.jpg
+PASS - ref assets/img/alitechgrid-mobile-service.jpg
+PASS - ref assets/img/alitechgrid-business-service.jpg
+PASS - ref assets/img/alitechgrid-repair-service.jpg
+PASS - ref assets/img/alitechgrid-canada-logo.png
 
-Note: Final visual inspection on desktop and mobile after GitHub Pages deployment is recommended because this package overlays existing production base assets.
+Note: Static/logic validation. After GitHub Pages deployment, verify desktop and mobile rendering and all external booking/WhatsApp links.

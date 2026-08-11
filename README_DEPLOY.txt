@@ -67,3 +67,11 @@ POST-DEPLOYMENT CHECK
 
 RECOMMENDED COMMIT MESSAGE
 Strengthen on-site and pickup-return customer journey with professional service imagery
+
+FINAL 2026-08-11 MOBILE-SERVICE UPDATE
+- Added assets/img/alitechgrid-mobile-service.jpg as a fifth, secondary business-value image.
+- Homepage order: interactive selector -> We Come to You -> Pickup & Return -> Mobile service capability -> Small-Business IT -> Computer/Laptop Repair -> process -> CTA.
+- The mobile-service image is a clean landscape crop; poster headings/icons were excluded.
+- Do not delete existing production assets not included in this patch (CNAME, styles.css, site-config.js, main.js, logos, chatbot assets, policy pages, sitemap, etc.).
+- Upload files INSIDE the ZIP to the matching repository paths.
+- After GitHub Pages publishes, test index.html, estimate.html, book.html and contact.html in an InPrivate/Incognito window and on a phone.

@@ -1,0 +1,10 @@
+PASS - index.html has Surrey
+PASS - services.html has Surrey
+PASS - contact.html has Surrey
+PASS - estimate.html has Surrey
+PASS - index.html JSON-LD Surrey
+PASS - services.html JSON-LD Surrey
+PASS - contact.html JSON-LD Surrey
+PASS - estimate.html JSON-LD Surrey
+
+TOTAL: 8/8 passed
