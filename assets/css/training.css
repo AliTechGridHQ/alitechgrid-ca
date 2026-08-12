@@ -20,12 +20,12 @@
 }
 
 .training-hero-grid {
-  min-height: 650px;
+  min-height: 590px;
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(340px, .88fr);
   gap: 54px;
   align-items: center;
-  padding: 76px 0;
+  padding: 58px 0;
 }
 
 .training-kicker,
@@ -43,8 +43,8 @@
 
 .training-hero h1 {
   max-width: 850px;
-  margin: 18px 0 20px;
-  font-size: clamp(2.7rem, 5.2vw, 5.35rem);
+  margin: 16px 0 18px;
+  font-size: clamp(2.65rem, 4.45vw, 4.7rem);
 }
 
 .training-hero-lead {
@@ -54,13 +54,13 @@
   font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
 
-.training-tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
+.training-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
 .training-tags span {
   display:inline-flex; align-items:center; min-height:36px; padding:7px 12px;
   border:1px solid #ced9f2; border-radius:999px; background:rgba(255,255,255,.82);
-  color:var(--navy-900); font-size:.91rem; font-weight:750;
+  color:var(--navy-900); font-size:.88rem; font-weight:750;
 }
-.training-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:29px; }
+.training-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
 .training-availability { margin:18px 0 0; color:var(--muted); font-size:.94rem; }
 
 .training-promise {
@@ -201,6 +201,121 @@
 .training-disclosure p {
   margin:0; padding:17px 20px; border:1px solid #dfe5ef; border-radius:14px;
   background:#fafbfc; color:#596274; font-size:.88rem;
+}
+
+
+/* B.C. labour-market context */
+.training-bc-market {
+  position: relative;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.training-market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.training-market-card {
+  position: relative;
+  min-height: 178px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid #d9e2f4;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ffffff, #f6f9ff);
+  box-shadow: 0 10px 28px rgba(11,23,51,.05);
+}
+
+.training-market-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -48px;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: rgba(49,87,215,.07);
+}
+
+.training-market-number,
+.training-market-title,
+.training-market-period {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.training-market-number {
+  color: var(--blue-700);
+  font-size: clamp(2.25rem, 4vw, 3.35rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.training-market-title {
+  margin-top: 13px;
+  color: var(--navy-900);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.training-market-period {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 650;
+}
+
+.training-market-message {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 22px 24px;
+  border: 1px solid #dbe5fb;
+  border-radius: 16px;
+  background: #f7f9ff;
+}
+
+.training-market-message strong {
+  color: var(--navy-900);
+  font-size: 1.04rem;
+}
+
+.training-market-message p {
+  max-width: 800px;
+  margin: 5px 0 0;
+  color: var(--muted);
+}
+
+.training-source-link {
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.training-market-disclaimer {
+  margin: 15px 0 0;
+  color: #667085;
+  font-size: .84rem;
+}
+
+@media (max-width: 980px) {
+  .training-market-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-market-message {
+    grid-template-columns: 1fr;
+  }
+
+  .training-source-link {
+    white-space: normal;
+  }
 }
 
 @media (max-width:1320px) {
