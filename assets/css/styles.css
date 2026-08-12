@@ -84,6 +84,7 @@ button, input, textarea, select { font: inherit; }
   font-weight: 650;
   padding: 10px 12px;
   border-radius: 10px;
+  white-space: nowrap;
 }
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
@@ -432,7 +433,7 @@ h3 { font-size: 1.28rem; margin: 0 0 10px; }
   .footer-grid > :first-child { grid-column: 1 / -1; }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1180px) {
   .header-inner { flex-wrap: wrap; }
   .brand img { width: 230px; }
   .menu-button { display: block; }
