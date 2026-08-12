@@ -359,3 +359,78 @@
 @media (prefers-reduced-motion:reduce) {
   .training-card:hover { transform:none; }
 }
+
+
+
+/* ============================
+   V7 Job-role training system
+   ============================ */
+.v7-hero .training-hero-grid{min-height:610px}
+.v7-hero .training-hero h1{max-width:790px}
+.role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.role-card{display:flex;flex-direction:column;min-height:100%;padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(11,23,51,.055)}
+.role-card-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.role-code{display:inline-grid;place-items:center;min-width:52px;height:39px;padding:0 11px;border-radius:11px;background:var(--navy-900);color:#fff;font-size:.78rem;font-weight:900;letter-spacing:.06em}
+.role-family{max-width:72%;color:var(--muted);font-size:.77rem;font-weight:750;text-align:right}
+.role-card h3{margin:0 0 12px;font-size:1.52rem}
+.role-duration{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:10px}
+.role-duration strong{color:var(--blue-700)}
+.role-duration span{color:#166534;font-size:.86rem;font-weight:750}
+.role-price{margin-bottom:20px;padding:10px 12px;border-radius:10px;background:#eef8f1;color:#215b34;font-weight:850}
+.role-price small{display:block;margin-top:2px;color:#4f6b58;font-weight:600}
+.role-card h4{margin:0 0 8px;font-size:.86rem;letter-spacing:.08em;text-transform:uppercase;color:#596579}
+.role-card ul{margin:0 0 18px;padding-left:20px;color:#3e495e}
+.role-card li{margin:7px 0}
+.role-skills,.role-final{padding:14px 15px;border:1px solid #dbe5fb;border-radius:12px;background:#f7f9ff;margin-top:12px}
+.role-final{background:#fbfcfe}
+.role-skills strong,.role-final strong{display:block;color:var(--navy-900);font-size:.9rem}
+.role-skills p,.role-final p{margin:5px 0 0;color:#526078;font-size:.91rem}
+.role-estimate{margin-top:18px;align-self:flex-start}
+.source-note{margin:24px 0 0;padding:15px 17px;border-left:4px solid #8ca2ce;background:#f8fafd;color:#596579;font-size:.88rem}
+.completion-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:46px;align-items:start}
+.completion-rules{display:grid;gap:14px}
+.completion-rules article{padding:20px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.completion-rules strong{color:var(--navy-900)}
+.completion-rules p{margin:6px 0 0;color:var(--muted)}
+.completion-note{margin:24px 0 0;padding:14px 16px;border:1px solid #dfe5ef;border-radius:12px;background:#fff;color:#596274;font-size:.88rem}
+.addon-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.addon-card{padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.addon-label{font-size:.72rem;font-weight:900;letter-spacing:.1em;color:var(--blue-700)}
+.addon-card h3{margin:10px 0 8px;font-size:1.26rem}
+.addon-card p{color:var(--muted)}
+.addon-hours{font-size:.9rem}.addon-price{color:#215b34!important;font-weight:850}
+.cycle-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.cycle-grid article{padding:20px 16px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.cycle-grid span{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--blue-100);color:var(--blue-700);font-weight:900;margin-bottom:12px}
+.cycle-grid strong{display:block;color:var(--navy-900)}
+.cycle-grid p{margin:6px 0 0;color:var(--muted);font-size:.88rem}
+@media(max-width:1100px){.cycle-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){.completion-grid{grid-template-columns:1fr}.addon-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.role-grid{grid-template-columns:1fr}.cycle-grid{grid-template-columns:1fr}.role-card-top{align-items:flex-start;flex-direction:column}.role-family{max-width:100%;text-align:left}}
+
+/* Training estimator */
+.estimator-page{background:#f6f8fc}
+.estimator-shell{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:26px;align-items:start;padding:46px 0 72px}
+.estimator-form,.estimate-output{padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 12px 34px rgba(7,19,39,.06)}
+.estimator-form h1{font-size:clamp(2rem,4vw,3.2rem);margin:8px 0 10px}
+.form-field{margin-top:18px}
+.form-field label{display:block;margin-bottom:7px;color:var(--navy-900);font-weight:800}
+.form-field select,.form-field input,.form-field textarea{width:100%;min-height:46px;padding:11px 12px;border:1px solid #cfd8e7;border-radius:10px;background:#fff;color:#1c2738;font:inherit}
+.form-field textarea{min-height:88px;resize:vertical}
+.form-help{margin:6px 0 0;color:var(--muted);font-size:.84rem}
+.estimate-output{position:sticky;top:104px}
+.estimate-kicker{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:var(--blue-700)}
+.estimate-output h2{margin:8px 0 6px}
+.estimate-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}
+.estimate-summary div{padding:13px;border:1px solid var(--line);border-radius:10px;background:#f8fafd}
+.estimate-summary span{display:block;color:var(--muted);font-size:.78rem}.estimate-summary strong{display:block;margin-top:3px;color:var(--navy-900)}
+.estimate-fee{padding:18px;border-radius:14px;background:var(--navy-900);color:#fff}
+.estimate-fee span{display:block;color:#cbd7ef;font-size:.8rem}.estimate-fee strong{display:block;margin-top:4px;color:#fff;font-size:2rem}
+.estimate-plan{margin-top:22px}.estimate-plan h3{margin-bottom:8px}.estimate-plan ul{padding-left:20px;color:#465269}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.payment-grid div{padding:13px;border:1px solid #dbe5fb;border-radius:10px;background:#f7f9ff}
+.payment-grid span{display:block;color:var(--muted);font-size:.78rem}.payment-grid strong{display:block;margin-top:3px;color:var(--navy-900)}
+.estimate-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.estimate-note{margin:18px 0 0;padding:13px 14px;border-left:4px solid #8ca2ce;background:#f8fafd;color:#596274;font-size:.84rem}
+@media(max-width:980px){.estimator-shell{grid-template-columns:1fr}.estimate-output{position:static}}
+@media(max-width:620px){.estimate-summary,.payment-grid{grid-template-columns:1fr}}
