@@ -79,3 +79,4 @@ Confirm before advertising:
 The website includes `estimate.html`, a customer-facing Request an Estimate page. It prepares an email to `sales@alitechgrid.com`; the static website does not store form information.
 
 Initial estimates remain subject to diagnosis, service scope, travel/pickup requirements and parts availability.
+Cloudflare deployment refresh
