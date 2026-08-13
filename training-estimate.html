@@ -32,8 +32,8 @@
 <main id="main" class="estimator-page">
 <section class="page-hero"><div class="container">
   <span class="eyebrow">Initial Training Plan &amp; Estimate</span>
-  <h1>Choose the role. See the skills, hours and tentative price.</h1>
-  <p class="lead">This tool creates an initial estimate only. Final scope, schedule, delivery mode, prerequisites, location, taxes and payment terms are confirmed before payment.</p>
+  <h1>Choose the role. Review the learning plan, hours and initial estimate.</h1>
+  <p class="lead">Build a role-based preliminary plan before committing. The estimator shows core skills, practical outcomes, training hours, completion support and an initial price. Final terms are confirmed before payment.</p>
 </div></section>
 <section><div class="container estimator-shell">
   <form class="estimator-form" id="training-estimator">
@@ -77,28 +77,86 @@
       <textarea id="goal" name="goal" placeholder="Example: I want to prepare for desktop support jobs and improve Windows/Linux troubleshooting."></textarea>
     </div>
   </form>
-  <section class="estimate-output" aria-live="polite">
-    <span class="estimate-kicker">YOUR INITIAL PLAN</span>
-    <h2 id="out-title">Desktop Support Analyst</h2>
-    <p id="out-description">Role-aligned practical training plan.</p>
-    <div class="estimate-summary">
-      <div><span>Core training</span><strong id="out-hours">16 hours</strong></div>
-      <div><span>Included support</span><strong id="out-support">Up to 2 hours</strong></div>
+  <section class="estimate-output" aria-live="polite" aria-labelledby="out-title">
+    <div class="estimate-document-head">
+      <div>
+        <span class="estimate-kicker">ALI TECHGRID CANADA · INITIAL TRAINING PLAN &amp; ESTIMATE</span>
+        <h2 id="out-title">Desktop Support Analyst</h2>
+        <p id="out-description">Role-aligned practical training plan.</p>
+      </div>
+      <div class="estimate-document-meta">
+        <div><span>Estimate reference</span><strong id="out-reference">ATG-TRN</strong></div>
+        <div><span>Prepared</span><strong id="out-date">—</strong></div>
+        <div><span>Status</span><strong>Tentative · confirmation required</strong></div>
+      </div>
+    </div>
+
+    <div class="estimate-summary estimate-summary-six">
+      <div><span>Core training</span><strong id="out-hours">16 instructional hours</strong></div>
+      <div><span>Skills Completion Support</span><strong id="out-support">Up to 2 hours included</strong></div>
       <div><span>Format</span><strong id="out-format">Small group</strong></div>
+      <div><span>Participants</span><strong id="out-participants">1</strong></div>
       <div><span>Delivery</span><strong id="out-delivery">Scheduled location</strong></div>
+      <div><span>Current level</span><strong id="out-level">New / foundation</strong></div>
     </div>
-    <div class="estimate-fee"><span>TENTATIVE TRAINING FEE</span><strong id="out-fee">CAD $649</strong><small id="out-fee-note">per participant</small></div>
-    <div class="estimate-plan"><h3>Core skills in this plan</h3><ul id="out-skills"></ul></div>
-    <div class="estimate-plan"><h3>Practical final task</h3><p id="out-final"></p></div>
+
+    <div class="estimate-fee professional-fee">
+      <span>ESTIMATED TRAINING SUBTOTAL</span>
+      <strong id="out-fee">CAD $649.00</strong>
+      <small id="out-fee-note">1 participant × CAD $649.00/person</small>
+      <div class="estimate-tax-line"><span>Applicable taxes</span><strong>Confirmed before payment</strong></div>
+    </div>
+
+    <div class="estimate-plan">
+      <h3>Core skills included in this plan</h3>
+      <ul id="out-skills"></ul>
+    </div>
+
+    <div class="estimate-plan">
+      <h3>Practical final task</h3>
+      <p id="out-final"></p>
+    </div>
+
+    <div class="estimate-plan">
+      <h3>Prerequisite / placement note</h3>
+      <p id="out-prereq"></p>
+    </div>
+
+    <div class="estimate-goal" id="out-goal-wrap" hidden>
+      <strong>Your stated goal</strong>
+      <p id="out-goal"></p>
+    </div>
+
     <div class="payment-grid">
-      <div><span>Booking deposit after confirmation</span><strong id="out-deposit">CAD $162.25</strong></div>
-      <div><span>Estimated balance</span><strong id="out-balance">CAD $486.75</strong></div>
+      <div>
+        <span id="deposit-label">Suggested booking deposit after confirmation</span>
+        <strong id="out-deposit">CAD $162.25</strong>
+        <small>Before applicable taxes</small>
+      </div>
+      <div>
+        <span>Estimated remaining balance</span>
+        <strong id="out-balance">CAD $486.75</strong>
+        <small>Before applicable taxes</small>
+      </div>
     </div>
+
+    <div class="estimate-payment-note">
+      <strong>Payment schedule</strong>
+      <p id="out-payment-schedule">25% booking deposit after scope/schedule confirmation; remaining 75% due before training unless otherwise agreed in writing.</p>
+    </div>
+
     <div class="estimate-actions">
       <a class="button button-primary" id="wa-estimate" href="#" target="_blank" rel="noopener noreferrer">WhatsApp this estimate</a>
-      <a class="button button-secondary" href="contact.html">Request confirmation</a>
+      <a class="button button-secondary" id="email-estimate" href="#">Email this estimate</a>
+      <button class="button button-secondary" id="print-estimate" type="button">Print / Save PDF</button>
     </div>
-    <p class="estimate-note"><strong>Tentative estimate only.</strong> No payment is collected on this page. Final training scope, schedule, prerequisites, equipment/lab requirements, location, taxes, cancellation/refund terms and payment instructions are confirmed before payment. On-site travel or special lab requirements may change the final price.</p>
+
+    <p class="estimate-note">
+      <strong>Initial estimate only.</strong> No payment is collected on this page. The final training scope, schedule,
+      delivery mode, prerequisites, equipment/lab requirements, location, applicable taxes, cancellation/refund terms
+      and payment instructions are confirmed before payment. On-site travel or special lab requirements may change
+      the final price. Skills Completion Support applies only to listed core outcomes under the published conditions.
+    </p>
   </section>
 </div></section>
 </main>
