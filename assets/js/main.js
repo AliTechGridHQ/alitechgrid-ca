@@ -99,14 +99,19 @@
     }
   });
 
-  // Homepage market wording: local on-site IT service + scalable online training.
-  // DOM-only enhancement so the existing approved layout and HTML structure are preserved.
+  // Homepage reach wording: precise local service claims + scalable online training.
   if (path.endsWith("/") || path.endsWith("/index.html")) {
+    const badge = document.querySelector(".dynamic-hero-heading .local-badge");
+    if (badge) {
+      badge.textContent = "LOCAL TECH REPAIR & IT SUPPORT · METRO VANCOUVER";
+    }
+
     const locationLine = document.querySelector(".dynamic-location");
     if (locationLine) {
       locationLine.innerHTML =
-        'Serving <strong>Metro Vancouver</strong> for on-site IT services.<br>' +
-        '<span class="atg-training-reach">Live online technical training available across Canada. International training available by arrangement.</span>';
+        'Serving <strong>Coquitlam, Port Moody, Burnaby, New Westminster &amp; Surrey</strong> for on-site IT services. ' +
+        'Other Metro Vancouver locations by arrangement.<br>' +
+        '<span class="atg-training-reach">Live online technical training across Canada. International training available by arrangement.</span>';
     }
   }
 
@@ -131,55 +136,6 @@
       phoneRow.className = "contact-row";
       phoneRow.innerHTML = `<strong>Business phone</strong><br><a href="${businessPhoneHref}" data-phone-link="true">${businessPhoneDisplay}</a><br><span class="muted">Press 0 for Customer Support, 1 for Technical Support, or 2 for AI, Cloud Consultancy & Training.</span>`;
       contactPanel.insertBefore(phoneRow, contactPanel.firstChild);
-    }
-  }
-
-  // Make the Learn → Apply market card an explicit, accessible action.
-  if (path.endsWith("/training.html")) {
-    const marketCards = Array.from(document.querySelectorAll(".training-market-card"));
-    const learnApplyCard = marketCards.find((card) => {
-      const number = card.querySelector(".training-market-number");
-      return number && /learn\s*[→>-]+\s*apply/i.test(number.textContent || "");
-    });
-
-    if (learnApplyCard && !learnApplyCard.dataset.atgInteractive) {
-      learnApplyCard.dataset.atgInteractive = "true";
-      learnApplyCard.classList.add("atg-clickable-market-card");
-      learnApplyCard.setAttribute("role", "link");
-      learnApplyCard.setAttribute("tabindex", "0");
-      learnApplyCard.setAttribute(
-        "aria-label",
-        "Build your AliTechGrid job-role training plan and estimate"
-      );
-
-      if (!learnApplyCard.querySelector(".atg-market-cta")) {
-        const cta = document.createElement("span");
-        cta.className = "atg-market-cta";
-        cta.textContent = "Build your plan →";
-        learnApplyCard.appendChild(cta);
-      }
-
-      const openPlanner = () => {
-        window.location.href = "training-estimate.html";
-      };
-
-      learnApplyCard.addEventListener("click", openPlanner);
-      learnApplyCard.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openPlanner();
-        }
-      });
-
-      if (!document.getElementById("atg-market-card-action-style")) {
-        const style = document.createElement("style");
-        style.id = "atg-market-card-action-style";
-        style.textContent =
-          ".atg-clickable-market-card{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}" +
-          ".atg-clickable-market-card:hover,.atg-clickable-market-card:focus-visible{transform:translateY(-2px);box-shadow:0 12px 30px rgba(7,19,39,.12);outline:2px solid currentColor;outline-offset:3px;}" +
-          ".atg-market-cta{display:block;margin-top:.65rem;font-weight:700;}";
-        document.head.appendChild(style);
-      }
     }
   }
 
