@@ -434,3 +434,94 @@
 .estimate-note{margin:18px 0 0;padding:13px 14px;border-left:4px solid #8ca2ce;background:#f8fafd;color:#596274;font-size:.84rem}
 @media(max-width:980px){.estimator-shell{grid-template-columns:1fr}.estimate-output{position:static}}
 @media(max-width:620px){.estimate-summary,.payment-grid{grid-template-columns:1fr}}
+
+
+/* V7.1 — professional training estimate output */
+.estimate-document-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(250px,.55fr);
+  gap:22px;
+  align-items:start;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--line);
+}
+.estimate-document-head h2{margin:7px 0 5px}
+.estimate-document-head p{margin:0;color:var(--muted)}
+.estimate-document-meta{display:grid;gap:8px}
+.estimate-document-meta div{
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#f8fafd;
+}
+.estimate-document-meta span,
+.estimate-tax-line span,
+.payment-grid small{
+  display:block;
+  color:var(--muted);
+  font-size:.76rem;
+}
+.estimate-document-meta strong{display:block;margin-top:3px;color:var(--navy-900);font-size:.88rem}
+.estimate-summary-six{grid-template-columns:repeat(3,minmax(0,1fr))}
+.professional-fee{margin-top:4px}
+.estimate-tax-line{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.2);
+}
+.estimate-tax-line span{color:#cbd7ef}
+.estimate-tax-line strong{margin:0;color:#fff;font-size:.9rem}
+.estimate-goal,
+.estimate-payment-note{
+  margin-top:18px;
+  padding:14px 15px;
+  border:1px solid #dbe5fb;
+  border-radius:12px;
+  background:#f7f9ff;
+}
+.estimate-goal strong,
+.estimate-payment-note strong{color:var(--navy-900)}
+.estimate-goal p,
+.estimate-payment-note p{margin:5px 0 0;color:#526078}
+#participants:disabled{background:#eef1f5;color:#6b7280;cursor:not-allowed}
+
+@media(max-width:760px){
+  .estimate-document-head{grid-template-columns:1fr}
+  .estimate-summary-six{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .estimate-summary-six{grid-template-columns:1fr}
+}
+
+@media print{
+  .site-header,
+  .site-footer,
+  .page-hero,
+  .estimator-form,
+  .estimate-actions,
+  .whatsapp-float{display:none!important}
+  body,.estimator-page{background:#fff!important}
+  .estimator-shell{display:block!important;padding:0!important}
+  .estimate-output{
+    position:static!important;
+    box-shadow:none!important;
+    border:0!important;
+    padding:0!important;
+    max-width:none!important;
+  }
+  .professional-fee{
+    background:#fff!important;
+    color:#111!important;
+    border:1px solid #bbb!important;
+  }
+  .professional-fee span,
+  .professional-fee strong,
+  .estimate-tax-line span,
+  .estimate-tax-line strong{color:#111!important}
+  .estimate-tax-line{border-top:1px solid #bbb!important}
+  a{color:#111!important;text-decoration:none!important}
+}
