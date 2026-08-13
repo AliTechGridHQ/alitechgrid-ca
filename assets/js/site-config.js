@@ -10,11 +10,10 @@ window.ALITECHGRID_CONFIG = {
 };
 
 /*
-  V7.2 final integration.
-  Isolated DOM-only enhancements:
-  - Add Training before Book Service when it is missing.
-  - Update only the homepage hero heading/supporting line.
-  No CSS, estimator, booking or service-selector behavior is changed here.
+  V7.2.2 homepage heading layout fix.
+  - Preserves booking/config values.
+  - Preserves Training navigation integration.
+  - Controls only homepage H1 line grouping.
 */
 (function () {
   try {
@@ -48,11 +47,23 @@ window.ALITECHGRID_CONFIG = {
       var homeLead = homeHero.querySelector(".dynamic-lead");
 
       if (homeHeading) {
-        homeHeading.textContent = "Computer Repair, Network Support & Job‑Role Technical Training";
+        homeHeading.innerHTML =
+          'Computer Repair, Network Support &amp;<br>' +
+          '<span class="atg-home-role-line">Job&#8209;Role Technical Training</span>';
+
+        if (!document.getElementById("atg-home-heading-style")) {
+          var style = document.createElement("style");
+          style.id = "atg-home-heading-style";
+          style.textContent =
+            '.dynamic-hero-heading h1 .atg-home-role-line{white-space:nowrap;}' +
+            '@media(max-width:700px){.dynamic-hero-heading h1 .atg-home-role-line{white-space:normal;}}';
+          document.head.appendChild(style);
+        }
       }
 
       if (homeLead) {
-        homeLead.textContent = "Windows & Linux · Desktop Support · Wi‑Fi & Networking · Cloud · Automation · AI‑Assisted IT Operations";
+        homeLead.textContent =
+          "Windows & Linux · Desktop Support · Wi‑Fi & Networking · Cloud · Automation · AI‑Assisted IT Operations";
       }
     }
   } catch (error) {
