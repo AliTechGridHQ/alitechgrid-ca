@@ -4,6 +4,9 @@
   const CONTACT_EMAIL = "contact@alitechgrid.com";
   const WHATSAPP_NUMBER = "16726719982";
 
+  const PHYSICAL_LAB_NOTE =
+    "Where physical equipment practice is required for this training plan, AliTechGrid will arrange and schedule the practical session. Date, location, joining instructions, applicable safety requirements and equipment procedures will be provided separately. Any required physical lab and any related cost will be identified in the final confirmed plan before payment.";
+
   const plans = {
     "desktop-support": {
       code: "DSA",
@@ -13,6 +16,7 @@
       group: 649,
       private: 999,
       team: 2399,
+      physicalLab: true,
       prereq: "Basic computer use is sufficient. No previous technician job experience is required. Learners with very limited Windows/Linux familiarity may use the included Skills Completion Support for listed core outcomes.",
       skills: [
         "Endpoint setup and employee-use configuration",
@@ -31,6 +35,7 @@
       group: 349,
       private: 549,
       team: 1499,
+      physicalLab: false,
       prereq: "Basic computer and internet use is sufficient. The workshop is designed for new or early-career support learners.",
       skills: [
         "Incident intake and problem clarification",
@@ -49,6 +54,7 @@
       group: 349,
       private: 549,
       team: 1499,
+      physicalLab: false,
       prereq: "Basic computer use is required. Previous customer-service experience is helpful but not required.",
       skills: [
         "Incident vs service-request classification",
@@ -67,6 +73,7 @@
       group: 649,
       private: 999,
       team: 2399,
+      physicalLab: true,
       prereq: "Basic computer use is required. Hardware activities are performed using safe handling procedures and suitable lab equipment.",
       skills: [
         "PC/laptop hardware inspection and safe handling",
@@ -85,6 +92,7 @@
       group: 649,
       private: 999,
       team: 2399,
+      physicalLab: true,
       prereq: "Basic computer use is required. Previous networking experience is not mandatory, but learners should be comfortable using Windows or Linux command-line tools during guided labs.",
       skills: [
         "TCP/IP, IPv4, gateway, DHCP and DNS troubleshooting",
@@ -103,6 +111,7 @@
       group: 899,
       private: 1399,
       team: 3199,
+      physicalLab: true,
       prereq: "Recommended: basic TCP/IP and computer-support knowledge, or completion of equivalent Network Support Technician fundamentals. This pathway moves faster and includes broader network operations tasks.",
       skills: [
         "LAN/WAN and workstation network-service installation",
@@ -121,6 +130,7 @@
       group: 499,
       private: 749,
       team: 1899,
+      physicalLab: false,
       prereq: "Recommended: basic Windows/Linux and TCP/IP familiarity. The track is practical foundation training, not a cloud-engineer certification program.",
       skills: [
         "Windows/Linux administration basics",
@@ -139,6 +149,7 @@
       group: 499,
       private: 749,
       team: 1899,
+      physicalLab: false,
       prereq: "Basic computer use is required. Previous scripting experience is helpful but not required; the course focuses on small support/operations automations rather than advanced software development.",
       skills: [
         "Practical scripting fundamentals",
@@ -157,6 +168,7 @@
       group: 249,
       private: 399,
       team: 999,
+      physicalLab: false,
       prereq: "Basic computer use and familiarity with common support tasks are recommended. Labs use authorized, synthetic, public or otherwise approved data only.",
       skills: [
         "Responsible AI use in support workflows",
@@ -213,6 +225,24 @@
     }).format(new Date());
   }
 
+  function ensurePhysicalLabBlock() {
+    let wrap = q("#out-physical-wrap");
+    if (wrap) return wrap;
+
+    const finalBlock = q("#out-final")?.closest(".estimate-plan");
+    if (!finalBlock) return null;
+
+    wrap = document.createElement("div");
+    wrap.className = "estimate-plan atg-physical-lab-note";
+    wrap.id = "out-physical-wrap";
+    wrap.hidden = true;
+    wrap.innerHTML =
+      '<h3>Physical Skills Lab — If Required</h3>' +
+      '<p id="out-physical"></p>';
+    finalBlock.insertAdjacentElement("afterend", wrap);
+    return wrap;
+  }
+
   function buildMessage(data) {
     return [
       "Hello AliTechGrid Canada.",
@@ -226,12 +256,13 @@
       `Participants: ${data.participants}`,
       `Delivery: ${data.deliveryText}`,
       `Current level: ${data.level}`,
+      data.physicalLab ? "Physical Skills Lab: If required for the confirmed plan, scheduled separately by AliTechGrid." : "",
       `Estimated subtotal: ${fmtMoney(data.fee)} (${data.feeNote})`,
       `Suggested deposit after confirmation: ${fmtMoney(data.deposit)} before applicable taxes`,
       `Estimated balance: ${fmtMoney(data.balance)} before applicable taxes`,
       data.goal ? `Goal: ${data.goal}` : "",
       "",
-      "Please confirm the final scope, schedule, prerequisites, applicable taxes, cancellation/refund terms and payment instructions."
+      "Please confirm the final scope, schedule, prerequisites, physical-lab requirements if applicable, location, applicable taxes, cancellation/refund terms and payment instructions."
     ].filter(Boolean).join("\n");
   }
 
@@ -314,6 +345,13 @@
     q("#out-skills").innerHTML = p.skills.map((item) => `<li>${item}</li>`).join("");
     q("#out-final").textContent = p.final;
 
+    const physicalWrap = ensurePhysicalLabBlock();
+    if (physicalWrap) {
+      const physicalText = q("#out-physical");
+      if (physicalText) physicalText.textContent = p.physicalLab ? PHYSICAL_LAB_NOTE : "";
+      physicalWrap.hidden = !p.physicalLab;
+    }
+
     const goalWrap = q("#out-goal-wrap");
     q("#out-goal").textContent = goal;
     goalWrap.hidden = !goal;
@@ -327,6 +365,7 @@
       participants,
       deliveryText,
       level,
+      physicalLab: p.physicalLab,
       fee,
       feeNote,
       deposit,

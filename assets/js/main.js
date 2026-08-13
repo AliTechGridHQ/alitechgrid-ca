@@ -71,7 +71,6 @@
     });
   });
 
-
   // Public AliTechGrid business telephone and click-to-call support.
   const businessPhoneDisplay = "+1 778-358-4040";
   const businessPhoneHref = "tel:+17783584040";
@@ -99,6 +98,22 @@
       // Leave unrelated or non-standard structured data unchanged.
     }
   });
+
+  // Homepage reach wording: precise local service claims + scalable online training.
+  if (path.endsWith("/") || path.endsWith("/index.html")) {
+    const badge = document.querySelector(".dynamic-hero-heading .local-badge");
+    if (badge) {
+      badge.textContent = "LOCAL TECH REPAIR & IT SUPPORT · METRO VANCOUVER";
+    }
+
+    const locationLine = document.querySelector(".dynamic-location");
+    if (locationLine) {
+      locationLine.innerHTML =
+        'Serving <strong>Coquitlam, Port Moody, Burnaby, New Westminster &amp; Surrey</strong> for on-site IT services. ' +
+        'Other Metro Vancouver locations by arrangement.<br>' +
+        '<span class="atg-training-reach">Live online technical training across Canada. International training available by arrangement.</span>';
+    }
+  }
 
   // Add Call Now to the Canada homepage.
   if (path.endsWith("/") || path.endsWith("/index.html")) {
