@@ -1,0 +1,566 @@
+/* AliTechGrid Canada — Training Pilot
+   Additive stylesheet. It does not replace the production styles.css file. */
+
+.training-page {
+  --training-teal: #0f766e;
+  --training-teal-dark: #0b5e57;
+  --training-teal-soft: #eaf8f6;
+}
+
+.training-page .header-inner { max-width: 1360px; }
+
+.training-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 88% 16%, rgba(49,87,215,.16), transparent 29%),
+    radial-gradient(circle at 7% 88%, rgba(15,118,110,.10), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f8faff 58%, #eef3ff 100%);
+}
+
+.training-hero-grid {
+  min-height: 590px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(340px, .88fr);
+  gap: 54px;
+  align-items: center;
+  padding: 58px 0;
+}
+
+.training-kicker,
+.training-promise-label,
+.training-cta-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-700);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.training-hero h1 {
+  max-width: 850px;
+  margin: 16px 0 18px;
+  font-size: clamp(2.65rem, 4.45vw, 4.7rem);
+}
+
+.training-hero-lead {
+  max-width: 790px;
+  margin: 0;
+  color: #47516a;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+
+.training-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.training-tags span {
+  display:inline-flex; align-items:center; min-height:36px; padding:7px 12px;
+  border:1px solid #ced9f2; border-radius:999px; background:rgba(255,255,255,.82);
+  color:var(--navy-900); font-size:.88rem; font-weight:750;
+}
+.training-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.training-availability { margin:18px 0 0; color:var(--muted); font-size:.94rem; }
+
+.training-promise {
+  position:relative; padding:34px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.10); border-radius:28px;
+  background:linear-gradient(150deg,#08152c,#132b5b);
+  box-shadow:0 24px 65px rgba(7,19,39,.18); color:#fff;
+}
+.training-promise::after {
+  content:""; position:absolute; width:190px; height:190px; right:-82px; bottom:-88px;
+  border-radius:50%; background:rgba(76,117,223,.22);
+}
+.training-promise-label { color:#a9c0ff; }
+.training-promise h2 { position:relative; z-index:1; margin:12px 0 22px; color:#fff; font-size:clamp(1.85rem,3vw,2.55rem); }
+.training-promise-list { position:relative; z-index:1; list-style:none; padding:0; margin:0; counter-reset:practical; }
+.training-promise-list li {
+  position:relative; display:grid; grid-template-columns:42px 1fr; column-gap:13px;
+  padding:14px 0; border-bottom:1px solid rgba(255,255,255,.09); counter-increment:practical;
+}
+.training-promise-list li:last-child { border-bottom:0; }
+.training-promise-list li::before {
+  content:counter(practical); grid-row:1 / span 2; display:grid; place-items:center;
+  width:34px; height:34px; border-radius:50%; background:rgba(143,169,255,.14);
+  border:1px solid rgba(143,169,255,.28); color:#d8e4ff; font-weight:850;
+}
+.training-promise-list strong { color:#fff; }
+.training-promise-list span { color:#cbd7ef; font-size:.93rem; }
+.training-promise-note {
+  position:relative; z-index:1; margin:20px 0 0; padding-top:17px;
+  border-top:1px solid rgba(255,255,255,.12); color:#d8e4ff; font-size:.91rem;
+}
+
+.training-trust { background:var(--navy-950); color:#fff; }
+.training-trust-grid { display:grid; grid-template-columns:repeat(4,1fr); }
+.training-trust-grid div { padding:21px 22px; border-right:1px solid rgba(255,255,255,.10); }
+.training-trust-grid div:last-child { border-right:0; }
+.training-trust-grid strong,.training-trust-grid span { display:block; }
+.training-trust-grid strong { color:#fff; font-size:1rem; }
+.training-trust-grid span { margin-top:2px; color:#bfcbea; font-size:.88rem; }
+
+.training-section-heading {
+  display:grid; grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);
+  gap:40px; align-items:end; margin-bottom:34px;
+}
+.training-section-heading h2 { max-width:760px; margin-top:10px; margin-bottom:0; }
+.training-section-heading > p { max-width:590px; margin:0; color:var(--muted); }
+
+.training-card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.training-card {
+  display:flex; flex-direction:column; min-height:100%; padding:28px;
+  border:1px solid var(--line); border-radius:20px; background:#fff;
+  box-shadow:0 10px 30px rgba(11,23,51,.045);
+}
+.training-card:hover {
+  transform:translateY(-2px); border-color:#cbd7ef; box-shadow:0 18px 48px rgba(11,23,51,.09);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.featured-training-card { border-top:4px solid var(--blue-600); }
+.training-card-custom { border-top:4px solid var(--training-teal); }
+.training-card-top { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:18px; }
+.training-card-code {
+  display:inline-grid; place-items:center; min-width:48px; height:38px; padding:0 10px;
+  border-radius:11px; background:var(--blue-100); color:var(--blue-700);
+  font-size:.82rem; font-weight:900; letter-spacing:.05em;
+}
+.training-card-format { color:var(--muted); font-size:.86rem; font-weight:700; }
+.training-card h3 { margin-bottom:8px; font-size:1.45rem; }
+.training-card-summary { margin:0 0 17px; color:var(--muted); }
+.training-card ul { margin:0 0 20px; padding-left:20px; }
+.training-card li { margin:7px 0; color:#394256; }
+.training-card-outcome {
+  margin-top:auto; padding:14px 15px; border:1px solid #dbe5fb;
+  border-radius:12px; background:#f7f9ff; color:#34405a; font-size:.92rem;
+}
+.training-card-link { display:inline-flex; margin-top:18px; text-decoration:none; font-weight:800; }
+
+.training-format-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; align-items:stretch; }
+.training-format-card {
+  position:relative; padding:28px; border:1px solid var(--line); border-radius:20px; background:#fff;
+}
+.training-format-featured { border:2px solid var(--blue-600); box-shadow:0 18px 48px rgba(36,75,169,.10); }
+.training-format-badge {
+  position:absolute; top:18px; right:18px; padding:5px 9px; border-radius:999px;
+  background:var(--blue-700); color:#fff; font-size:.72rem; font-weight:850; letter-spacing:.08em;
+}
+.training-format-hours { display:block; color:var(--blue-700); font-size:.83rem; font-weight:900; letter-spacing:.13em; }
+.training-format-card h3 { margin-top:11px; font-size:1.4rem; }
+.training-format-card p,.training-format-card li { color:var(--muted); }
+.training-format-card ul { padding-left:18px; margin-bottom:0; }
+.training-format-note { margin:22px 0 0; color:var(--muted); text-align:center; }
+
+.training-experience-grid {
+  display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:48px; align-items:center;
+}
+.training-evidence-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.training-evidence-grid > div { padding:22px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+.training-evidence-grid span { display:block; color:var(--blue-600); font-size:.8rem; font-weight:900; letter-spacing:.1em; }
+.training-evidence-grid strong { display:block; margin-top:8px; color:var(--navy-900); font-size:1.05rem; }
+.training-evidence-grid p { margin:6px 0 0; color:var(--muted); font-size:.92rem; }
+
+.training-audience h2 { max-width:760px; }
+.training-audience-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:30px; }
+.training-audience-grid article { padding:22px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+.training-audience-grid strong { color:var(--navy-900); }
+.training-audience-grid p { margin:7px 0 0; color:var(--muted); font-size:.92rem; }
+
+.training-faq h2 { margin-top:10px; }
+.training-faq-list { margin-top:30px; border-top:1px solid var(--line); }
+.training-faq-list details { border-bottom:1px solid var(--line); }
+.training-faq-list summary {
+  position:relative; padding:19px 42px 19px 0; cursor:pointer;
+  color:var(--navy-900); font-weight:800; list-style:none;
+}
+.training-faq-list summary::-webkit-details-marker { display:none; }
+.training-faq-list summary::after {
+  content:"+"; position:absolute; right:5px; top:14px;
+  color:var(--blue-700); font-size:1.4rem; font-weight:500;
+}
+.training-faq-list details[open] summary::after { content:"–"; }
+.training-faq-list details p { margin:-4px 0 19px; padding-right:42px; color:var(--muted); }
+
+.training-cta {
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:32px; align-items:center;
+  padding:42px; border-radius:24px; background:linear-gradient(135deg,var(--navy-900),#183978);
+  color:#fff; box-shadow:0 18px 50px rgba(11,23,51,.13);
+}
+.training-cta-kicker { color:#bcd0ff; }
+.training-cta h2 { margin:10px 0 9px; color:#fff; }
+.training-cta p { max-width:760px; margin:0; color:#d8e4ff; }
+.training-cta-actions { display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; }
+.training-button-light { background:#fff; color:var(--navy-900); }
+.training-button-light:hover { background:#eef3ff; color:var(--navy-900); }
+.training-button-outline { border-color:rgba(255,255,255,.35); color:#fff; background:transparent; }
+.training-button-outline:hover { border-color:#fff; color:#fff; }
+
+.training-disclosure { padding:0 0 46px; background:#fff; }
+.training-disclosure p {
+  margin:0; padding:17px 20px; border:1px solid #dfe5ef; border-radius:14px;
+  background:#fafbfc; color:#596274; font-size:.88rem;
+}
+
+
+/* B.C. labour-market context */
+.training-bc-market {
+  position: relative;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.training-market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.training-market-card {
+  position: relative;
+  min-height: 178px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid #d9e2f4;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ffffff, #f6f9ff);
+  box-shadow: 0 10px 28px rgba(11,23,51,.05);
+}
+
+.training-market-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -48px;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: rgba(49,87,215,.07);
+}
+
+.training-market-number,
+.training-market-title,
+.training-market-period {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.training-market-number {
+  color: var(--blue-700);
+  font-size: clamp(2.25rem, 4vw, 3.35rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.training-market-title {
+  margin-top: 13px;
+  color: var(--navy-900);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.training-market-period {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 650;
+}
+
+.training-market-message {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 22px 24px;
+  border: 1px solid #dbe5fb;
+  border-radius: 16px;
+  background: #f7f9ff;
+}
+
+.training-market-message strong {
+  color: var(--navy-900);
+  font-size: 1.04rem;
+}
+
+.training-market-message p {
+  max-width: 800px;
+  margin: 5px 0 0;
+  color: var(--muted);
+}
+
+.training-source-link {
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.training-market-disclaimer {
+  margin: 15px 0 0;
+  color: #667085;
+  font-size: .84rem;
+}
+
+@media (max-width: 980px) {
+  .training-market-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-market-message {
+    grid-template-columns: 1fr;
+  }
+
+  .training-source-link {
+    white-space: normal;
+  }
+}
+
+@media (max-width:1320px) {
+  .training-page .header-inner { flex-wrap:wrap; }
+  .training-page .brand img { width:230px; }
+  .training-page .menu-button { display:block; }
+  .training-page .main-nav {
+    display:none; order:4; flex:1 0 100%; flex-direction:column;
+    align-items:stretch; margin:0; padding:8px 0 4px;
+  }
+  .training-page .main-nav.is-open { display:flex; }
+  .training-page .main-nav a { padding:12px 10px; }
+  .training-page .header-book { display:none; }
+}
+
+@media (max-width:980px) {
+  .training-hero-grid,.training-section-heading,.training-experience-grid { grid-template-columns:1fr; }
+  .training-hero-grid { min-height:auto; padding:60px 0; }
+  .training-promise { max-width:760px; }
+  .training-trust-grid,.training-audience-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .training-trust-grid div:nth-child(2) { border-right:0; }
+  .training-trust-grid div:nth-child(-n+2) { border-bottom:1px solid rgba(255,255,255,.10); }
+  .training-format-grid { grid-template-columns:1fr; }
+  .training-cta { grid-template-columns:1fr; }
+  .training-cta-actions { justify-content:flex-start; }
+}
+
+@media (max-width:720px) {
+  .training-card-grid,.training-evidence-grid,.training-audience-grid { grid-template-columns:1fr; }
+  .training-trust-grid { grid-template-columns:1fr; }
+  .training-trust-grid div { border-right:0; border-bottom:1px solid rgba(255,255,255,.10); }
+  .training-trust-grid div:last-child { border-bottom:0; }
+  .training-hero h1 { font-size:clamp(2.35rem,12vw,3.65rem); }
+  .training-promise,.training-card,.training-format-card { padding:22px; }
+  .training-card-top { align-items:flex-start; flex-direction:column; gap:8px; }
+  .training-cta { padding:28px 22px; }
+  .training-cta-actions,.training-hero-actions { flex-direction:column; align-items:stretch; }
+  .training-cta-actions .button,.training-hero-actions .button { width:100%; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .training-card:hover { transform:none; }
+}
+
+
+
+/* ============================
+   V7 Job-role training system
+   ============================ */
+.v7-hero .training-hero-grid{min-height:610px}
+.v7-hero .training-hero h1{max-width:790px}
+.role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.role-card{display:flex;flex-direction:column;min-height:100%;padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(11,23,51,.055)}
+.role-card-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.role-code{display:inline-grid;place-items:center;min-width:52px;height:39px;padding:0 11px;border-radius:11px;background:var(--navy-900);color:#fff;font-size:.78rem;font-weight:900;letter-spacing:.06em}
+.role-family{max-width:72%;color:var(--muted);font-size:.77rem;font-weight:750;text-align:right}
+.role-card h3{margin:0 0 12px;font-size:1.52rem}
+.role-duration{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:10px}
+.role-duration strong{color:var(--blue-700)}
+.role-duration span{color:#166534;font-size:.86rem;font-weight:750}
+.role-price{margin-bottom:20px;padding:10px 12px;border-radius:10px;background:#eef8f1;color:#215b34;font-weight:850}
+.role-price small{display:block;margin-top:2px;color:#4f6b58;font-weight:600}
+.role-card h4{margin:0 0 8px;font-size:.86rem;letter-spacing:.08em;text-transform:uppercase;color:#596579}
+.role-card ul{margin:0 0 18px;padding-left:20px;color:#3e495e}
+.role-card li{margin:7px 0}
+.role-skills,.role-final{padding:14px 15px;border:1px solid #dbe5fb;border-radius:12px;background:#f7f9ff;margin-top:12px}
+.role-final{background:#fbfcfe}
+.role-skills strong,.role-final strong{display:block;color:var(--navy-900);font-size:.9rem}
+.role-skills p,.role-final p{margin:5px 0 0;color:#526078;font-size:.91rem}
+.role-estimate{margin-top:18px;align-self:flex-start}
+.source-note{margin:24px 0 0;padding:15px 17px;border-left:4px solid #8ca2ce;background:#f8fafd;color:#596579;font-size:.88rem}
+.completion-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:46px;align-items:start}
+.completion-rules{display:grid;gap:14px}
+.completion-rules article{padding:20px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.completion-rules strong{color:var(--navy-900)}
+.completion-rules p{margin:6px 0 0;color:var(--muted)}
+.completion-note{margin:24px 0 0;padding:14px 16px;border:1px solid #dfe5ef;border-radius:12px;background:#fff;color:#596274;font-size:.88rem}
+.addon-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.addon-card{padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.addon-label{font-size:.72rem;font-weight:900;letter-spacing:.1em;color:var(--blue-700)}
+.addon-card h3{margin:10px 0 8px;font-size:1.26rem}
+.addon-card p{color:var(--muted)}
+.addon-hours{font-size:.9rem}.addon-price{color:#215b34!important;font-weight:850}
+.cycle-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.cycle-grid article{padding:20px 16px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.cycle-grid span{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--blue-100);color:var(--blue-700);font-weight:900;margin-bottom:12px}
+.cycle-grid strong{display:block;color:var(--navy-900)}
+.cycle-grid p{margin:6px 0 0;color:var(--muted);font-size:.88rem}
+@media(max-width:1100px){.cycle-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){.completion-grid{grid-template-columns:1fr}.addon-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.role-grid{grid-template-columns:1fr}.cycle-grid{grid-template-columns:1fr}.role-card-top{align-items:flex-start;flex-direction:column}.role-family{max-width:100%;text-align:left}}
+
+/* Training estimator */
+.estimator-page{background:#f6f8fc}
+.estimator-shell{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:26px;align-items:start;padding:46px 0 72px}
+.estimator-form,.estimate-output{padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 12px 34px rgba(7,19,39,.06)}
+.estimator-form h1{font-size:clamp(2rem,4vw,3.2rem);margin:8px 0 10px}
+.form-field{margin-top:18px}
+.form-field label{display:block;margin-bottom:7px;color:var(--navy-900);font-weight:800}
+.form-field select,.form-field input,.form-field textarea{width:100%;min-height:46px;padding:11px 12px;border:1px solid #cfd8e7;border-radius:10px;background:#fff;color:#1c2738;font:inherit}
+.form-field textarea{min-height:88px;resize:vertical}
+.form-help{margin:6px 0 0;color:var(--muted);font-size:.84rem}
+.estimate-output{position:sticky;top:104px}
+.estimate-kicker{font-size:.76rem;font-weight:900;letter-spacing:.1em;color:var(--blue-700)}
+.estimate-output h2{margin:8px 0 6px}
+.estimate-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0}
+.estimate-summary div{padding:13px;border:1px solid var(--line);border-radius:10px;background:#f8fafd}
+.estimate-summary span{display:block;color:var(--muted);font-size:.78rem}.estimate-summary strong{display:block;margin-top:3px;color:var(--navy-900)}
+.estimate-fee{padding:18px;border-radius:14px;background:var(--navy-900);color:#fff}
+.estimate-fee span{display:block;color:#cbd7ef;font-size:.8rem}.estimate-fee strong{display:block;margin-top:4px;color:#fff;font-size:2rem}
+.estimate-plan{margin-top:22px}.estimate-plan h3{margin-bottom:8px}.estimate-plan ul{padding-left:20px;color:#465269}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.payment-grid div{padding:13px;border:1px solid #dbe5fb;border-radius:10px;background:#f7f9ff}
+.payment-grid span{display:block;color:var(--muted);font-size:.78rem}.payment-grid strong{display:block;margin-top:3px;color:var(--navy-900)}
+.estimate-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.estimate-note{margin:18px 0 0;padding:13px 14px;border-left:4px solid #8ca2ce;background:#f8fafd;color:#596274;font-size:.84rem}
+@media(max-width:980px){.estimator-shell{grid-template-columns:1fr}.estimate-output{position:static}}
+@media(max-width:620px){.estimate-summary,.payment-grid{grid-template-columns:1fr}}
+
+
+/* V7.1 — professional training estimate output */
+.estimate-document-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(250px,.55fr);
+  gap:22px;
+  align-items:start;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--line);
+}
+.estimate-document-head h2{margin:7px 0 5px}
+.estimate-document-head p{margin:0;color:var(--muted)}
+.estimate-document-meta{display:grid;gap:8px}
+.estimate-document-meta div{
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#f8fafd;
+}
+.estimate-document-meta span,
+.estimate-tax-line span,
+.payment-grid small{
+  display:block;
+  color:var(--muted);
+  font-size:.76rem;
+}
+.estimate-document-meta strong{display:block;margin-top:3px;color:var(--navy-900);font-size:.88rem}
+.estimate-summary-six{grid-template-columns:repeat(3,minmax(0,1fr))}
+.professional-fee{margin-top:4px}
+.estimate-tax-line{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.2);
+}
+.estimate-tax-line span{color:#cbd7ef}
+.estimate-tax-line strong{margin:0;color:#fff;font-size:.9rem}
+.estimate-goal,
+.estimate-payment-note{
+  margin-top:18px;
+  padding:14px 15px;
+  border:1px solid #dbe5fb;
+  border-radius:12px;
+  background:#f7f9ff;
+}
+.estimate-goal strong,
+.estimate-payment-note strong{color:var(--navy-900)}
+.estimate-goal p,
+.estimate-payment-note p{margin:5px 0 0;color:#526078}
+#participants:disabled{background:#eef1f5;color:#6b7280;cursor:not-allowed}
+
+@media(max-width:760px){
+  .estimate-document-head{grid-template-columns:1fr}
+  .estimate-summary-six{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .estimate-summary-six{grid-template-columns:1fr}
+}
+
+@media print{
+  .site-header,
+  .site-footer,
+  .page-hero,
+  .estimator-form,
+  .estimate-actions,
+  .whatsapp-float{display:none!important}
+  body,.estimator-page{background:#fff!important}
+  .estimator-shell{display:block!important;padding:0!important}
+  .estimate-output{
+    position:static!important;
+    box-shadow:none!important;
+    border:0!important;
+    padding:0!important;
+    max-width:none!important;
+  }
+  .professional-fee{
+    background:#fff!important;
+    color:#111!important;
+    border:1px solid #bbb!important;
+  }
+  .professional-fee span,
+  .professional-fee strong,
+  .estimate-tax-line span,
+  .estimate-tax-line strong{color:#111!important}
+  .estimate-tax-line{border-top:1px solid #bbb!important}
+  a{color:#111!important;text-decoration:none!important}
+}
+
+
+/* V7.2 — print/PDF polish only. Screen layout is unchanged. */
+@media print {
+  @page { margin: 14mm 12mm; }
+
+  .atg-chatbot,
+  .atg-chat-launcher,
+  .atg-chat-panel,
+  .whatsapp-float {
+    display: none !important;
+  }
+
+  .estimate-document-head,
+  .estimate-summary,
+  .estimate-fee,
+  .estimate-plan,
+  .estimate-goal,
+  .payment-grid,
+  .estimate-payment-note,
+  .estimate-note {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .estimate-plan h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .estimate-output {
+    font-size: 10.5pt;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

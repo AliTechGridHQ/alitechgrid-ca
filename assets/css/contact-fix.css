@@ -1,0 +1,5 @@
+/* Contact page five-card layout only */
+.contact-channel-grid-five{grid-template-columns:repeat(5,minmax(0,1fr))}
+.estimate-channel{border-top:4px solid var(--blue-700)}
+@media(max-width:1100px){.contact-channel-grid-five{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.contact-channel-grid-five{grid-template-columns:1fr}}

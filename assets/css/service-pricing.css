@@ -1,0 +1,9 @@
+
+.service-pricing-page{background:#f7f9fc}
+.pricing-hero{padding:64px 0;background:linear-gradient(135deg,#071327,#17376f);color:#fff}
+.pricing-hero h1{color:#fff;max-width:820px}.pricing-hero p{max-width:780px;color:#d7e2f7}
+.service-price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.service-price-card{padding:24px;border:1px solid var(--line);border-radius:17px;background:#fff}
+.service-price-card strong{display:block;color:var(--blue-700);font-size:1.8rem}.service-price-card h3{margin:8px 0 5px}.service-price-card p{color:var(--muted);margin:0}
+.pricing-policy{margin-top:24px;padding:18px;border:1px solid #dbe5fb;border-radius:14px;background:#f7f9ff;color:#4d5b73}
+@media(max-width:900px){.service-price-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.service-price-grid{grid-template-columns:1fr}}

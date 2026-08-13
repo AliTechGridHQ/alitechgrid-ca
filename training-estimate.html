@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Training Plan & Estimate | AliTechGrid Canada</title>
+  <meta name="description" content="Build an initial AliTechGrid practical IT training plan and estimate by B.C.-aligned job role, format and participant count.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css"><link rel="stylesheet" href="assets/css/training.css">
+</head>
+<body class="training-page">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="AliTechGrid Canada home" class="brand" href="index.html">
+<img alt="AliTechGrid Canada" src="assets/img/alitechgrid-canada-compact.png"/>
+</a>
+<button aria-controls="main-nav" aria-expanded="false" class="menu-button" data-menu-button="" type="button">Menu</button>
+<nav aria-label="Primary navigation" class="main-nav" data-main-nav="" id="main-nav">
+<a href="index.html">Home</a>
+<a href="services.html">Repair &amp; IT Services</a>
+<a href="websites.html">Websites</a>
+<a aria-current="page" href="training.html">Training</a>
+<a href="book.html">Book Service</a>
+<a href="estimate.html">Estimate</a>
+<a href="contact.html">Contact</a>
+</nav>
+<a class="button button-primary header-book" href="book.html">Book service</a>
+</div>
+</header>
+
+<main id="main" class="estimator-page">
+<section class="page-hero"><div class="container">
+  <span class="eyebrow">Initial Training Plan &amp; Estimate</span>
+  <h1>Choose the role. Review the learning plan, hours and initial estimate.</h1>
+  <p class="lead">Build a role-based preliminary plan before committing. The estimator shows core skills, practical outcomes, training hours, completion support and an initial price. Final terms are confirmed before payment.</p>
+</div></section>
+<section><div class="container estimator-shell">
+  <form class="estimator-form" id="training-estimator">
+    <span class="estimate-kicker">STEP 1 · SELECT YOUR TRAINING</span>
+    <h2>Build your plan</h2>
+    <div class="form-field"><label for="role">Job role / skill track</label>
+      <select id="role" name="role">
+        <option value="desktop-support">Desktop Support Analyst</option>
+        <option value="help-desk">Help Desk Technician</option>
+        <option value="service-desk">Service Desk Analyst</option>
+        <option value="computer-technician">Computer Technician</option>
+        <option value="network-support">Network Support Technician</option>
+        <option value="computer-network">Computer Network Technician</option>
+        <option value="cloud-support">Systems Administration & Cloud Support</option>
+        <option value="automation">Python & PowerShell IT Automation</option>
+        <option value="ai-support">AI-Assisted IT Support & Operations</option>
+      </select>
+    </div>
+    <div class="form-field"><label for="format">Training format</label>
+      <select id="format" name="format">
+        <option value="group">Small group — per person</option>
+        <option value="private">Private 1-to-1</option>
+        <option value="team">Business team — up to 6 participants</option>
+      </select>
+    </div>
+    <div class="form-field" id="participant-field"><label for="participants">Participants</label>
+      <input id="participants" name="participants" type="number" min="1" max="6" value="1">
+      <p class="form-help">Small-group estimate is shown per participant. Business-team pricing covers up to 6 participants.</p>
+    </div>
+    <div class="form-field"><label for="delivery">Preferred delivery</label>
+      <select id="delivery" name="delivery">
+        <option value="scheduled">AliTechGrid-arranged / scheduled location</option>
+        <option value="online">Live online</option>
+        <option value="onsite">Customer on-site — travel/lab requirements confirmed separately</option>
+      </select>
+    </div>
+    <div class="form-field"><label for="level">Current level</label>
+      <select id="level" name="level"><option>New / foundation</option><option>Some hands-on experience</option><option>Working in technical support</option></select>
+    </div>
+    <div class="form-field"><label for="goal">Your main goal (optional)</label>
+      <textarea id="goal" name="goal" placeholder="Example: I want to prepare for desktop support jobs and improve Windows/Linux troubleshooting."></textarea>
+    </div>
+  </form>
+  <section class="estimate-output" aria-live="polite" aria-labelledby="out-title">
+    <div class="estimate-document-head">
+      <div>
+        <span class="estimate-kicker">ALI TECHGRID CANADA · INITIAL TRAINING PLAN &amp; ESTIMATE</span>
+        <h2 id="out-title">Desktop Support Analyst</h2>
+        <p id="out-description">Role-aligned practical training plan.</p>
+      </div>
+      <div class="estimate-document-meta">
+        <div><span>Estimate reference</span><strong id="out-reference">ATG-TRN</strong></div>
+        <div><span>Prepared</span><strong id="out-date">—</strong></div>
+        <div><span>Status</span><strong>Tentative · confirmation required</strong></div>
+      </div>
+    </div>
+
+    <div class="estimate-summary estimate-summary-six">
+      <div><span>Core training</span><strong id="out-hours">16 instructional hours</strong></div>
+      <div><span>Skills Completion Support</span><strong id="out-support">Up to 2 hours included</strong></div>
+      <div><span>Format</span><strong id="out-format">Small group</strong></div>
+      <div><span>Participants</span><strong id="out-participants">1</strong></div>
+      <div><span>Delivery</span><strong id="out-delivery">Scheduled location</strong></div>
+      <div><span>Current level</span><strong id="out-level">New / foundation</strong></div>
+    </div>
+
+    <div class="estimate-fee professional-fee">
+      <span>ESTIMATED TRAINING SUBTOTAL</span>
+      <strong id="out-fee">CAD $649.00</strong>
+      <small id="out-fee-note">1 participant × CAD $649.00/person</small>
+      <div class="estimate-tax-line"><span>Applicable taxes</span><strong>Confirmed before payment</strong></div>
+    </div>
+
+    <div class="estimate-plan">
+      <h3>Core skills included in this plan</h3>
+      <ul id="out-skills"></ul>
+    </div>
+
+    <div class="estimate-plan">
+      <h3>Practical final task</h3>
+      <p id="out-final"></p>
+    </div>
+
+    <div class="estimate-plan">
+      <h3>Prerequisite / placement note</h3>
+      <p id="out-prereq"></p>
+    </div>
+
+    <div class="estimate-goal" id="out-goal-wrap" hidden>
+      <strong>Your stated goal</strong>
+      <p id="out-goal"></p>
+    </div>
+
+    <div class="payment-grid">
+      <div>
+        <span id="deposit-label">Suggested booking deposit after confirmation</span>
+        <strong id="out-deposit">CAD $162.25</strong>
+        <small>Before applicable taxes</small>
+      </div>
+      <div>
+        <span>Estimated remaining balance</span>
+        <strong id="out-balance">CAD $486.75</strong>
+        <small>Before applicable taxes</small>
+      </div>
+    </div>
+
+    <div class="estimate-payment-note">
+      <strong>Payment schedule</strong>
+      <p id="out-payment-schedule">25% booking deposit after scope/schedule confirmation; remaining 75% due before training unless otherwise agreed in writing.</p>
+    </div>
+
+    <div class="estimate-actions">
+      <a class="button button-primary" id="wa-estimate" href="#" target="_blank" rel="noopener noreferrer">WhatsApp this estimate</a>
+      <a class="button button-secondary" id="email-estimate" href="#">Email this estimate</a>
+      <button class="button button-secondary" id="print-estimate" type="button">Print / Save PDF</button>
+    </div>
+
+    <p class="estimate-note">
+      <strong>Initial estimate only.</strong> No payment is collected on this page. The final training scope, schedule,
+      delivery mode, prerequisites, equipment/lab requirements, location, applicable taxes, cancellation/refund terms
+      and payment instructions are confirmed before payment. On-site travel or special lab requirements may change
+      the final price. Skills Completion Support applies only to listed core outcomes under the published conditions.
+    </p>
+  </section>
+</div></section>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<img alt="AliTechGrid Canada" class="footer-logo" src="assets/img/alitechgrid-canada-logo.png"/>
+<p>Proudly Canadian local computer repair, Wi-Fi and network help, practical IT training, small-business IT and website design for Coquitlam, Surrey and nearby Greater Vancouver communities.</p>
+<p><strong>Call:</strong> <a href="tel:+17783584040">+1 778-358-4040</a><br/>
+<strong>WhatsApp:</strong> <a href="https://wa.me/16726719982">+1 672 671 9982</a></p>
+</div>
+<div>
+<h3>Services</h3>
+<ul class="footer-links">
+<li><a href="services.html">Repair &amp; IT services</a></li>
+<li><a href="websites.html">Website design</a></li>
+<li><a href="training.html">Practical IT training</a></li>
+<li><a href="book.html">Book a service</a></li>
+<li><a href="estimate.html">Request an estimate</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3>Company</h3>
+<ul class="footer-links">
+<li><a href="about.html">About AliTechGrid</a></li>
+<li><a href="privacy.html">Privacy policy</a></li>
+<li><a href="terms.html">Service terms</a></li>
+<li><a href="accessibility.html">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span data-current-year=""></span> AliTechGrid Canada. All rights reserved.</span>
+<span>Coquitlam · Port Moody · Burnaby · New Westminster · Surrey · Greater Vancouver</span>
+</div>
+</div>
+</footer>
+
+<script src="assets/js/training-estimator.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6F9X2CTQ1C"></script>
+<script src="assets/js/main.js"></script>
+</body></html>
