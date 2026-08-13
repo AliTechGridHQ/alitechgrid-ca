@@ -171,7 +171,7 @@
 
   const q = (selector) => document.querySelector(selector);
   const fmtMoney = (amount) =>
-    new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(amount);
+    `CAD ${new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(amount)}`;
 
   const sessionSuffix = (() => {
     try {
