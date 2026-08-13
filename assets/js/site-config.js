@@ -10,8 +10,8 @@ window.ALITECHGRID_CONFIG = {
 };
 
 /*
-  V7.2.4 final responsive fit.
-  Preserves V7.2.3 desktop behavior and adds mobile-only corrections.
+  V7.2.5 final mobile cleanup.
+  Preserves approved desktop behavior and fixes mobile header / hero / floating actions only.
 */
 (function () {
   try {
@@ -56,7 +56,7 @@ window.ALITECHGRID_CONFIG = {
         var style = document.createElement("style");
         style.id = "atg-home-hero-fit";
         style.textContent =
-          /* Desktop: preserve the approved V7.2.3 single-line hero. */
+          /* Approved desktop behavior. */
           '@media (min-width:1150px){' +
           '.dynamic-hero-heading{max-width:none!important;}' +
           '.dynamic-hero-heading h1{' +
@@ -72,84 +72,101 @@ window.ALITECHGRID_CONFIG = {
           '}' +
           '}' +
 
-          /* Tablet: normal wrapping. */
           '@media (min-width:701px) and (max-width:1149px){' +
-          '.dynamic-hero-heading h1,' +
-          '.dynamic-hero-heading .dynamic-lead{white-space:normal;}' +
+          '.dynamic-hero-heading h1,.dynamic-hero-heading .dynamic-lead{white-space:normal;}' +
           '}' +
 
-          /* Mobile-only corrections. */
+          /* Mobile cleanup only. */
           '@media (max-width:700px){' +
+          'html,body{overflow-x:hidden!important;}' +
+
           '.site-header .header-inner{' +
-          'padding:10px 12px!important;' +
-          'gap:8px!important;' +
+          'padding:9px 10px!important;' +
+          'gap:6px!important;' +
           'flex-wrap:nowrap!important;' +
           '}' +
           '.site-header .brand img{' +
-          'width:200px!important;' +
-          'max-height:64px!important;' +
+          'width:170px!important;' +
+          'max-height:58px!important;' +
           '}' +
           '.site-header .menu-button{' +
           'margin-left:auto!important;' +
           'flex:0 0 auto!important;' +
-          'padding:8px 10px!important;' +
+          'padding:7px 9px!important;' +
+          'font-size:.95rem!important;' +
           '}' +
           '.site-header .header-book{display:none!important;}' +
 
-          '.dynamic-hero{' +
-          'padding:34px 0 30px!important;' +
-          '}' +
-          '.dynamic-hero-heading{' +
-          'margin-bottom:24px!important;' +
-          '}' +
+          '.dynamic-hero{padding:30px 0 28px!important;}' +
+          '.dynamic-hero-heading{margin-bottom:22px!important;}' +
           '.dynamic-hero-heading .local-badge{' +
           'max-width:100%!important;' +
-          'padding:6px 9px!important;' +
-          'font-size:.62rem!important;' +
-          'letter-spacing:.075em!important;' +
-          'line-height:1.35!important;' +
+          'padding:5px 8px!important;' +
+          'font-size:.60rem!important;' +
+          'letter-spacing:.065em!important;' +
+          'line-height:1.3!important;' +
           '}' +
           '.dynamic-hero-heading h1{' +
           'max-width:none!important;' +
-          'margin:18px 0 14px!important;' +
-          'font-size:2.05rem!important;' +
-          'line-height:1.05!important;' +
-          'letter-spacing:-.035em!important;' +
+          'margin:17px 0 13px!important;' +
+          'font-size:1.8rem!important;' +
+          'line-height:1.07!important;' +
+          'letter-spacing:-.03em!important;' +
           'white-space:normal!important;' +
-          'overflow-wrap:normal!important;' +
           'word-break:normal!important;' +
+          'overflow-wrap:normal!important;' +
           '}' +
           '.dynamic-hero-heading .dynamic-lead{' +
           'max-width:none!important;' +
-          'font-size:1rem!important;' +
-          'line-height:1.52!important;' +
+          'font-size:.96rem!important;' +
+          'line-height:1.48!important;' +
           'white-space:normal!important;' +
           '}' +
           '.dynamic-hero-heading .dynamic-location{' +
-          'font-size:.9rem!important;' +
-          'line-height:1.5!important;' +
+          'font-size:.86rem!important;' +
+          'line-height:1.46!important;' +
           '}' +
 
-          /* Keep chat available but compact so it does not cover the mobile content. */
+          /* Compact WhatsApp on the left. */
+          '.whatsapp-float{' +
+          'left:10px!important;' +
+          'right:auto!important;' +
+          'bottom:10px!important;' +
+          'width:46px!important;' +
+          'height:46px!important;' +
+          'min-height:46px!important;' +
+          'padding:0!important;' +
+          'border-radius:50%!important;' +
+          'justify-content:center!important;' +
+          'gap:0!important;' +
+          '}' +
+          '.whatsapp-float>span:last-child{' +
+          'position:absolute!important;' +
+          'width:1px!important;height:1px!important;' +
+          'padding:0!important;margin:-1px!important;' +
+          'overflow:hidden!important;clip:rect(0,0,0,0)!important;' +
+          'white-space:nowrap!important;border:0!important;' +
+          '}' +
+          '.whatsapp-float-icon{' +
+          'margin:0!important;' +
+          '}' +
+
+          /* Compact chat on the right. */
           '.atg-chatbot{right:10px!important;bottom:10px!important;}' +
           '.atg-chat-launcher{' +
-          'width:48px!important;' +
-          'height:48px!important;' +
-          'min-height:48px!important;' +
+          'width:46px!important;' +
+          'height:46px!important;' +
+          'min-height:46px!important;' +
           'padding:0!important;' +
           'justify-content:center!important;' +
           'border-radius:50%!important;' +
           '}' +
           '.atg-chat-launcher>span:last-child{' +
           'position:absolute!important;' +
-          'width:1px!important;' +
-          'height:1px!important;' +
-          'padding:0!important;' +
-          'margin:-1px!important;' +
-          'overflow:hidden!important;' +
-          'clip:rect(0,0,0,0)!important;' +
-          'white-space:nowrap!important;' +
-          'border:0!important;' +
+          'width:1px!important;height:1px!important;' +
+          'padding:0!important;margin:-1px!important;' +
+          'overflow:hidden!important;clip:rect(0,0,0,0)!important;' +
+          'white-space:nowrap!important;border:0!important;' +
           '}' +
           '}' ;
 
