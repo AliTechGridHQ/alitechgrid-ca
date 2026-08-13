@@ -525,3 +525,42 @@
   .estimate-tax-line{border-top:1px solid #bbb!important}
   a{color:#111!important;text-decoration:none!important}
 }
+
+
+/* V7.2 — print/PDF polish only. Screen layout is unchanged. */
+@media print {
+  @page { margin: 14mm 12mm; }
+
+  .atg-chatbot,
+  .atg-chat-launcher,
+  .atg-chat-panel,
+  .whatsapp-float {
+    display: none !important;
+  }
+
+  .estimate-document-head,
+  .estimate-summary,
+  .estimate-fee,
+  .estimate-plan,
+  .estimate-goal,
+  .payment-grid,
+  .estimate-payment-note,
+  .estimate-note {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .estimate-plan h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .estimate-output {
+    font-size: 10.5pt;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
