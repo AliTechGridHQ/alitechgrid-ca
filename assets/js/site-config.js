@@ -10,10 +10,9 @@ window.ALITECHGRID_CONFIG = {
 };
 
 /*
-  V7.2.2 homepage heading layout fix.
-  - Preserves booking/config values.
-  - Preserves Training navigation integration.
-  - Controls only homepage H1 line grouping.
+  V7.2.3 homepage hero fit fix.
+  Keeps the full desktop heading on one line where there is enough viewport width,
+  while allowing normal responsive wrapping on smaller screens.
 */
 (function () {
   try {
@@ -47,23 +46,38 @@ window.ALITECHGRID_CONFIG = {
       var homeLead = homeHero.querySelector(".dynamic-lead");
 
       if (homeHeading) {
-        homeHeading.innerHTML =
-          'Computer Repair, Network Support &amp;<br>' +
-          '<span class="atg-home-role-line">Job&#8209;Role Technical Training</span>';
-
-        if (!document.getElementById("atg-home-heading-style")) {
-          var style = document.createElement("style");
-          style.id = "atg-home-heading-style";
-          style.textContent =
-            '.dynamic-hero-heading h1 .atg-home-role-line{white-space:nowrap;}' +
-            '@media(max-width:700px){.dynamic-hero-heading h1 .atg-home-role-line{white-space:normal;}}';
-          document.head.appendChild(style);
-        }
+        homeHeading.textContent = "Computer Repair, Network Support & Job‑Role Technical Training";
       }
 
       if (homeLead) {
-        homeLead.textContent =
-          "Windows & Linux · Desktop Support · Wi‑Fi & Networking · Cloud · Automation · AI‑Assisted IT Operations";
+        homeLead.textContent = "Windows & Linux · Desktop Support · Wi‑Fi & Networking · Cloud · Automation · AI‑Assisted IT Operations";
+      }
+
+      if (!document.getElementById("atg-home-hero-fit")) {
+        var style = document.createElement("style");
+        style.id = "atg-home-hero-fit";
+        style.textContent =
+          '@media (min-width:1150px){' +
+          '.dynamic-hero-heading{max-width:none!important;}' +
+          '.dynamic-hero-heading h1{' +
+          'max-width:none!important;' +
+          'font-size:clamp(2rem,2.6vw,2.4rem)!important;' +
+          'white-space:nowrap;' +
+          'letter-spacing:-.045em;' +
+          '}' +
+          '.dynamic-hero-heading .dynamic-lead{' +
+          'max-width:none!important;' +
+          'white-space:nowrap;' +
+          'font-size:1.05rem;' +
+          '}' +
+          '}' +
+          '@media (max-width:1149px){' +
+          '.dynamic-hero-heading h1,' +
+          '.dynamic-hero-heading .dynamic-lead{' +
+          'white-space:normal;' +
+          '}' +
+          '}';
+        document.head.appendChild(style);
       }
     }
   } catch (error) {
