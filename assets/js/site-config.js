@@ -48,11 +48,11 @@ window.ALITECHGRID_CONFIG = {
       var homeLead = homeHero.querySelector(".dynamic-lead");
 
       if (homeHeading) {
-        homeHeading.textContent = "Computer Repair, Network Support & Job-Role Technical Training";
+        homeHeading.textContent = "Computer Repair, Network Support & Job‑Role Technical Training";
       }
 
       if (homeLead) {
-        homeLead.textContent = "Windows & Linux · Desktop Support · Wi-Fi & Networking · Cloud · Automation · AI-Assisted IT Operations";
+        homeLead.textContent = "Windows & Linux · Desktop Support · Wi‑Fi & Networking · Cloud · Automation · AI‑Assisted IT Operations";
       }
     }
   } catch (error) {
